@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+  </head>
+  <body>
+    <ol>
+      <li><a href="http://example.com">HTTP example.com</a></li>
+      <li><a href="https://example.com">HTTPS example.com</a></li>
+      <li><a href="ftp://example.com/test.txt"> FTP без авторизации test.txt</a></li>
+      <li><a href="ftp://user:passwd@example.com/test.txt">FTP с авторизацией test.txt</a></li>
+      <li><a href="https://example.com/#anchor">Ссылка на фрагмент страницы некоторого сайта</a></li>
+      <li><a href="#paragraph">Ссылка на фрагмент текущей страницы</a></li>
+      <li><a href="https://example.com/article?page=2&lang=en">Ссылка с двумя параметрами в URL</a></li>
+      <li>
+        <b>Навигация:</b>
+        <nav>
+          <a href="/upper_x2/upper/site/index.html" title="Main page">Главная</a>
+          <a href="/upper_x2/upper/site/page.html" title="Page 1">Страница 1</a>
+          <a href="/upper_x2/upper/site/about/page2.html" title="Page 2">Страница 2</a>
+          <a href="/upper_x2/upper/page3.html" title="Page 3">Страница 3</a>
+          <a href="/upper_x2/page4.html" title="Page 4">Страница 4</a>
+        </nav>
+      </li>
+      <li><a>Ссылка без href</a></li>
+      <li><a href="">Ссылка с пустым href</a></li>
+      <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+      <li>
+        <noindex><a href="https://example.com">Ссылка, запрещенная для индексации поисковиками</a></noindex>
+      </li>
+      <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
+      <li>Ссылка-изображение:  <a href="https://vk.com/xstratumm"><img src="vklogo.png" width="3%"></a></li>
+      <li>
+        <p>Ссылки из прямоугольных и круглых областей картинки:</p>
+        <img usemap="#mymap" src="figures.png">
+        <map name="mymap">
+          <area shape="rect" coords="8,135,138,68" href="https://yandex.ru">
+          <area shape="rect" coords="332,174,411,40" href="https://google.ru">
+          <area shape="circle" coords="225,101,70" href="https://brave.com">
+        </map>
+      </li>
+      <li><a href="page1.html">Ссылка на страницу в текущем каталоге</a></li>
+      <li><a href="about/page2.html">Ссылка на странице в каталоге about</a></li>
+      <li><a href="../page3.html">Ссылка на страницу в каталоге уровнем выше текущего</a></li>
+      <li><a href="../../page4.html">Ссылка на страницу в каталоге двумя уровнями выше</a></li>
+      <li><a href="/upper_x2/upper/site/index.html">Сокращенная на главную</a></li>
+      <li><a href="/upper_x2/upper/site/about/page2.html">Сокращенная на внутреннюю</a></li>
+    </ol>
+    <h2><b>HTML-форма:</b></h2>
+    <form action="/" method="POST">
+      <label>
+        Имя:<br>
+        <input name="name" value="введите ваше имя"> 
+      </label><br>
+      <label>
+        E-mail:<br>
+        <input name="email" value="введите ваш e-mail">
+      </label><br>
+      <label>
+        Дата рождения:<br>
+        <input name="birthdate" value="2003-05-26" type="date">
+      </label><br>
+      Пол:<br>
+      <label>
+        <input type="radio" checked="checked"
+               name="female" value="жен">
+        женский 
+      </label>
+      <label>
+        <input type="radio"
+               name="male" value="муж">
+        мужской
+      </label><br><br>
+      Количество конечностей:<br>
+      <label>
+        <input type="radio"
+              name="limb-1" value="0">
+        0
+      </label>
+      <label>
+        <input type="radio"
+              name="limb-1" value="1">
+        1
+      </label>
+      <label>
+        <input type="radio"
+              name="limb-1" value="2">
+        2
+      </label>
+      <label>
+        <input type="radio"
+              name="limb-1" value="3">
+        3
+      </label>
+      <label>
+        <input type="radio"
+              name="limb-1" value="4">
+        4
+      </label>
+      <br><br>
+      <label>
+        <b>Сверхспособности:</b><br>
+        <select name="field-superpower"
+                multiple="multiple">
+          <option value="immortality"
+                  selected="selected">
+          бессмертие
+          </option>
+          <option value="walk-through">
+          прохождение сквозь стены
+          </option>
+          <option value="levitation"
+                  selected="selected">
+          левитация
+          </option>
+        </select><br><br>
+        Биография:
+        <textarea name="biography">напишите вашу биографию</textarea>
+      </label><br><br>
+      <label>
+        С контрактом ознакомлен (а):
+        <input type="checkbox" name="agreement">
+      </label><br><br>
+      <label>
+        Сформировать заявку:
+        <input type="submit" value="Тык!">
+      </label>
+    </form>
+  </body>
+</html>
