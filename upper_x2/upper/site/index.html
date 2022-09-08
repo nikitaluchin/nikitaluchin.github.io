@@ -26,21 +26,21 @@
       <li><a>Ссылка без href</a></li>
       <li><a href="">Ссылка с пустым href</a></li>
       <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
-      <li>
-        <noindex><a href="https://example.com">Ссылка, запрещенная для индексации поисковиками</a></noindex>
-      </li>
+      <noindex>
+        <li><a href="https://example.com" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a></li>
+      </noindex>
       <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
-      <li>Ссылка-изображение:  <a href="https://vk.com/xstratumm"><img src="vklogo.png" width="3%"></a></li>
+      <li>Ссылка-изображение:  <a href="https://vk.com/xstratumm"><img src="vklogo.png" style="width:3%;" alt="vklogo"></a></li>
       <li>
         <p>Ссылки из прямоугольных и круглых областей картинки:</p>
-        <img usemap="#mymap" src="figures.png">
+        <img usemap="#mymap" src="figures.png" alt="figures">
         <map name="mymap">
-          <area shape="rect" coords="8,135,138,68" href="https://yandex.ru">
-          <area shape="rect" coords="332,174,411,40" href="https://google.ru">
-          <area shape="circle" coords="225,101,70" href="https://brave.com">
+          <area shape="rect" coords="8,135,138,68" href="https://yandex.ru" alt="rect">
+          <area shape="rect" coords="332,174,411,40" href="https://google.ru" alt="rect">
+          <area shape="circle" coords="225,101,70" href="https://brave.com" alt="circle">
         </map>
       </li>
-      <li><a href="page1.html">Ссылка на страницу в текущем каталоге</a></li>
+      <li><a href="page.html">Ссылка на страницу в текущем каталоге</a></li>
       <li><a href="about/page2.html">Ссылка на странице в каталоге about</a></li>
       <li><a href="../page3.html">Ссылка на страницу в каталоге уровнем выше текущего</a></li>
       <li><a href="../../page4.html">Ссылка на страницу в каталоге двумя уровнями выше</a></li>
@@ -115,6 +115,8 @@
           левитация
           </option>
         </select><br><br>
+      </label>
+      <label>
         Биография:
         <textarea name="biography">напишите вашу биографию</textarea>
       </label><br><br>
@@ -124,7 +126,7 @@
       </label><br><br>
       <label>
         Сформировать заявку:
-        <input type="submit" value="Тык!">
+        <input type="submit" value="тык!">
       </label>
     </form>
   </body>
