@@ -10,162 +10,167 @@
   <body>
 
     <header>
-      <img id="logo" src="logo.png" alt="xstratumm">
+        <div id="container">
+            <img id="logo" src="logo.png" alt="xstratumm">
+            <h3 id="name">Just a website</h3>
+        </div>
     </header>
 
-    <h3 id="hyperlinks">Гиперссылки:</h3>
-    <ol>
-      <li><a href="http://example.com">HTTP example.com</a></li>
-      <li><a href="https://example.com">HTTPS example.com</a></li>
-      <li><a href="ftp://example.com/test.txt"> FTP без авторизации test.txt</a></li>
-      <li><a href="ftp://user:passwd@example.com/test.txt">FTP с авторизацией test.txt</a></li>
-      <li><a href="https://example.com/#anchor">Ссылка на фрагмент страницы некоторого сайта</a></li>
-      <li><a href="#paragraph">Ссылка на фрагмент текущей страницы</a></li>
-      <li><a href="https://example.com/article?page=2&lang=en">Ссылка с двумя параметрами в URL</a></li>
-      <li>
-        <b>Навигация:</b>
-        <nav>
-          <ul>
-            <li><a href="#hyperlinks" title="Список гиперссылок">Список гиперссылок</a></li>
-            <li><a href="#form" title="HTML-форма">HTML-форма</a></li>
-            <li><a href="#table" title="HTML-таблица">HTML-таблица</a></li>
-          </ul>
-        </nav>
-      </li>
-      <li><a>Ссылка без href</a></li>
-      <li><a href="">Ссылка с пустым href</a></li>
-      <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
-      <!--noindex-->
-      <li><a href="https://example.com" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a></li>
-      <!--/noindex-->
-      <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
-      <li>Ссылка-изображение: <br> <a href="https://vk.com/xstratumm"><img id="vklogo" src="vklogo.png" alt="VK"></a></li>
-      <li>
-        <p>Ссылки из прямоугольных и круглых областей картинки:</p>
-        <img usemap="#figures" src="figures.png" alt="figures">
-        <map name="figures">
-          <area shape="rect" coords="8,70,136,136" href="https://yandex.ru" alt="rect">
-          <area shape="rect" coords="332,42,411,173" href="https://google.ru" alt="rect">
-          <area shape="circle" coords="225,101,70" href="https://brave.com" alt="circle">
-        </map>
-      </li>
-      <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-      <li><a href="about/page2.html">Относительная ссылка на странице в каталоге about</a></li>
-      <li><a href="../page3.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-      <li><a href="../../page4.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-      <li><a href="/">Сокращенная на главную</a></li>
-      <li><a href="/about/about">Сокращенная на внутреннюю</a></li>
-    </ol>
+    <div id="content">
+      <h3 id="hyperlinks">Гиперссылки:</h3>
+      <ol>
+        <li><a href="http://example.com">HTTP example.com</a></li>
+        <li><a href="https://example.com">HTTPS example.com</a></li>
+        <li><a href="ftp://example.com/test.txt"> FTP без авторизации test.txt</a></li>
+        <li><a href="ftp://user:passwd@example.com/test.txt">FTP с авторизацией test.txt</a></li>
+        <li><a href="https://example.com/#anchor">Ссылка на фрагмент страницы некоторого сайта</a></li>
+        <li><a href="#paragraph">Ссылка на фрагмент текущей страницы</a></li>
+        <li><a href="https://example.com/article?page=2&lang=en">Ссылка с двумя параметрами в URL</a></li>
+        <li>
+          <b>Навигация:</b>
+          <nav>
+            <ul>
+              <li><a href="#hyperlinks" title="Список гиперссылок">Список гиперссылок</a></li>
+              <li><a href="#form" title="HTML-форма">HTML-форма</a></li>
+              <li><a href="#table" title="HTML-таблица">HTML-таблица</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+        <!--noindex-->
+        <li><a href="https://example.com" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a></li>
+        <!--/noindex-->
+        <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
+        <li>Ссылка-изображение: <br> <a href="https://vk.com/xstratumm"><img id="vklogo" src="vklogo.png" alt="VK"></a></li>
+        <li>
+          <p>Ссылки из прямоугольных и круглых областей картинки:</p>
+          <img usemap="#figures" src="figures.png" alt="figures">
+          <map name="figures">
+            <area shape="rect" coords="8,70,136,136" href="https://yandex.ru" alt="rect">
+            <area shape="rect" coords="332,42,411,173" href="https://google.ru" alt="rect">
+            <area shape="circle" coords="225,101,70" href="https://brave.com" alt="circle">
+          </map>
+        </li>
+        <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li><a href="about/page2.html">Относительная ссылка на странице в каталоге about</a></li>
+        <li><a href="../page3.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../page4.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+        <li><a href="/">Сокращенная на главную</a></li>
+        <li><a href="/about/about">Сокращенная на внутреннюю</a></li>
+      </ol>
 
-    <h3 id="table">HTML-таблица</h3>
-    <table>
-      <thead>
-        <tr class="even">
-          <th>1-я колонка</th>
-          <th>2-я колонка</th>
-          <th>3-я колонка</th>
-          <th>4-я колонка</th>
-        </tr>
-      </thead>
+      <h3 id="table">HTML-таблица</h3>
+      <table>
+        <thead>
+          <tr class="even">
+            <th>1-я колонка</th>
+            <th>2-я колонка</th>
+            <th>3-я колонка</th>
+            <th>4-я колонка</th>
+          </tr>
+        </thead>
 
-      <tbody>
-        <tr class="odd">
-          <td colspan="3">Объед-ые 11, 12, 13</td>
-          <td>14</td>
-        </tr>
-        <tr class="even">
-          <td>21</td>
-          <td>22</td>
-          <td>23</td>
-          <td>24</td>
-        </tr>
-        <tr class="odd">
-          <td colspan="2">Объед-ые 31, 32</td>
-          <td colspan="2">Объед-ые 33, 34</td>
-        </tr>
-        <tr class="even">
-          <td colspan="4">Объед-ые 41, 42, 43, 44</td>
-        </tr>
-        <tr class="odd">
-          <td>51</td>
-          <td colspan="2">Объед-ые 52, 53</td>
-          <td>54</td>
-        </tr>
-      </tbody>
-    </table>
+        <tbody>
+          <tr class="odd">
+            <td colspan="3">Объед-ые 11, 12, 13</td>
+            <td>14</td>
+          </tr>
+          <tr class="even">
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+          </tr>
+          <tr class="odd">
+            <td colspan="2">Объед-ые 31, 32</td>
+            <td colspan="2">Объед-ые 33, 34</td>
+          </tr>
+          <tr class="even">
+            <td colspan="4">Объед-ые 41, 42, 43, 44</td>
+          </tr>
+          <tr class="odd">
+            <td>51</td>
+            <td colspan="2">Объед-ые 52, 53</td>
+            <td>54</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <h3 id="form"><b>HTML-форма:</b></h3>
-    <form action="/" method="POST">
-      <label>
-        Имя:<br>
-        <input name="name" placeholder="введите ваше имя"> 
-      </label><br><br>
-      <label>
-        E-mail:<br>
-        <input name="email" placeholder="введите ваш e-mail">
-      </label><br><br>
-      <label>
-        Дата рождения:<br>
-        <input name="birthdate" value="2003-05-26" type="date">
-      </label><br><br>
-        Пол:<br>
-      <label>
-        <input type="radio" name="gender" value="жен">
-        женский 
-      </label>
-      <label>
-        <input type="radio" name="gender" value="муж">
-        мужской
-      </label><br><br>
-        Количество конечностей:<br>
-      <label>
-        <input type="radio" name="limb" value="0">
-        0
-      </label>
-      <label>
-        <input type="radio" name="limb" value="1">
-        1
-      </label>
-      <label>
-        <input type="radio" name="limb" value="2">
-        2
-      </label>
-      <label>
-        <input type="radio" name="limb" value="3">
-        3
-      </label>
-      <label>
-        <input type="radio" name="limb" value="4">
-        4
-      </label>
-      <br><br>
-      <label>
-        <b>Сверхспособности:</b><br>
-        <select name="field-superpower" multiple>
-          <option value="immortality" selected>
-            бессмертие
-          </option>
-          <option value="walk-through">
-            прохождение сквозь стены
-          </option>
-          <option value="levitation" selected>
-            левитация
-          </option>
-        </select><br><br>
-      </label>
-      <label>
-        Биография:<br>
-        <textarea name="biography" placeholder="напишите вашу биографию"></textarea>
-      </label><br><br>
-      <label>
-        С контрактом ознакомлен (а):
-        <input type="checkbox" name="agreement">
-      </label><br><br>
-      <label>
-        Сформировать заявку:
-        <input type="submit" value="Отправить">
-      </label>
-    </form>
+      <h3 id="form"><b>HTML-форма:</b></h3>
+      <form action="/" method="POST">
+        <label>
+          Имя:<br>
+          <input name="name" placeholder="введите ваше имя"> 
+        </label><br><br>
+        <label>
+          E-mail:<br>
+          <input name="email" placeholder="введите ваш e-mail">
+        </label><br><br>
+        <label>
+          Дата рождения:<br>
+          <input name="birthdate" value="2003-05-26" type="date">
+        </label><br><br>
+          Пол:<br>
+        <label>
+          <input type="radio" name="gender" value="жен">
+          женский 
+        </label>
+        <label>
+          <input type="radio" name="gender" value="муж">
+          мужской
+        </label><br><br>
+          Количество конечностей:<br>
+        <label>
+          <input type="radio" name="limb" value="0">
+          0
+        </label>
+        <label>
+          <input type="radio" name="limb" value="1">
+          1
+        </label>
+        <label>
+          <input type="radio" name="limb" value="2">
+          2
+        </label>
+        <label>
+          <input type="radio" name="limb" value="3">
+          3
+        </label>
+        <label>
+          <input type="radio" name="limb" value="4">
+          4
+        </label>
+        <br><br>
+        <label>
+          <b>Сверхспособности:</b><br>
+          <select name="field-superpower" multiple>
+            <option value="immortality" selected>
+              бессмертие
+            </option>
+            <option value="walk-through">
+              прохождение сквозь стены
+            </option>
+            <option value="levitation" selected>
+              левитация
+            </option>
+          </select><br><br>
+        </label>
+        <label>
+          Биография:<br>
+          <textarea name="biography" placeholder="напишите вашу биографию"></textarea>
+        </label><br><br>
+        <label>
+          С контрактом ознакомлен (а):
+          <input type="checkbox" name="agreement">
+        </label><br><br>
+        <label>
+          Сформировать заявку:
+          <input type="submit" value="Отправить">
+        </label>
+      </form>
+    </div>
 
     <footer>
       <span id="copyright">(c) xstratumm (Никита Лучин) <br> 2022</span>

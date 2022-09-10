@@ -9,14 +9,12 @@
 }
 
 body {
-    margin: auto;
+    margin: 0;
     font-family: Montserrat-Regular;
-    /* margin-left: 20px; */
 }
 
 header {
     width: 100%;
-    background-color: black;
 }
 
 footer {
@@ -34,6 +32,21 @@ tr.even {
 
 tr.odd {
     background-color: greenyellow;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    margin-left: 20px;
+}
+
+#name {
+    font-size: 300%;
+    color: #1E4AD6;
 }
 
 #logo {
