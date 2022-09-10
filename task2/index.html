@@ -34,7 +34,7 @@
       <li><a href="https://example.com" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a></li>
       <!--/noindex-->
       <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
-      <li>Ссылка-изображение:  <a href="https://vk.com/xstratumm"><img id="vklogo" src="vklogo.png" alt="VK"></a></li>
+      <li>Ссылка-изображение: <br> <a href="https://vk.com/xstratumm"><img id="vklogo" src="vklogo.png" alt="VK"></a></li>
       <li>
         <p>Ссылки из прямоугольных и круглых областей картинки:</p>
         <img usemap="#figures" src="figures.png" alt="figures">
@@ -91,19 +91,18 @@
 
     <h3 id="form"><b>HTML-форма:</b></h3>
     <form action="/" method="POST">
-      
       <label>
         Имя:<br>
         <input name="name" placeholder="введите ваше имя"> 
-      </label><br>
+      </label><br><br>
       <label>
         E-mail:<br>
         <input name="email" placeholder="введите ваш e-mail">
-      </label><br>
+      </label><br><br>
       <label>
         Дата рождения:<br>
         <input name="birthdate" value="2003-05-26" type="date">
-      </label><br>
+      </label><br><br>
         Пол:<br>
       <label>
         <input type="radio" name="gender" value="жен">
@@ -150,7 +149,7 @@
         </select><br><br>
       </label>
       <label>
-        Биография:
+        Биография:<br>
         <textarea name="biography" placeholder="напишите вашу биографию"></textarea>
       </label><br><br>
       <label>
@@ -162,5 +161,10 @@
         <input type="submit" value="Отправить">
       </label>
     </form>
+
+    <footer>
+      <span id="copyright">(c) xstratumm (Никита Лучин) <br> 2022</span>
+    </footer>
+    
   </body>
 </html>

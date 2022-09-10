@@ -1,3 +1,23 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url(Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(Montserrat-Regular.ttf);
+}
+
+body {
+    font-family: Montserrat-Regular;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    margin: 20px auto;
+}
+
 table {
     text-align: center;
 }
@@ -11,5 +31,13 @@ tr.odd {
 }
 
 #vklogo {
-    width: 3%;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 5%;
+}
+
+#copyright {
+    font-family: Ubuntu-Bold;
+    text-align: center;
+    font-size: 120%;
 }
