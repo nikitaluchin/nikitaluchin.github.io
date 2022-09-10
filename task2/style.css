@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Ubuntu-Bold;
-    src: url(Ubuntu-Bold.ttf);
+    font-family: Montserrat-Bold;
+    src: url(Montserrat-Bold.ttf);
 }
 
 @font-face {
@@ -9,8 +9,14 @@
 }
 
 body {
+    margin: auto;
     font-family: Montserrat-Regular;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+}
+
+header {
+    width: 100%;
+    background-color: black;
 }
 
 footer {
@@ -30,6 +36,10 @@ tr.odd {
     background-color: greenyellow;
 }
 
+#logo {
+    width: 20%;
+}
+
 #vklogo {
     margin-top: 10px;
     margin-left: 50px;
@@ -37,7 +47,7 @@ tr.odd {
 }
 
 #copyright {
-    font-family: Ubuntu-Bold;
+    font-family: Montserrat-Bold;
     text-align: center;
-    font-size: 120%;
+    font-size: 110%;
 }
