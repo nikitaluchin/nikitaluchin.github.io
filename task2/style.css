@@ -1,0 +1,15 @@
+table {
+    text-align: center;
+}
+
+tr.even {
+    background-color: aqua;
+}
+
+tr.odd {
+    background-color: greenyellow;
+}
+
+#vklogo {
+    width: 3%;
+}
