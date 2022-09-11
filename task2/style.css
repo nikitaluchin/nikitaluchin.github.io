@@ -26,12 +26,27 @@ table {
     text-align: center;
 }
 
-tr.even {
+.even {
     background-color: aqua;
 }
 
-tr.odd {
+.odd {
     background-color: greenyellow;
+}
+
+.btn {
+    background-color: #1E4AD6;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: 2px solid #1E4AD6;
+}
+
+.btn:hover {
+    background-color: white;
+    transition: 0.4s;
+    color: #1E4AD6;
 }
 
 #container {
@@ -39,6 +54,14 @@ tr.odd {
     width: 100%;
     align-items: center;
     justify-content: center;
+}
+
+#navigation {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 #content {
