@@ -45,7 +45,7 @@ table {
     color: #1E4AD6;
 }
 
-#container {
+#header {
     display: flex; /* флексбокс */
     width: 100%;
     align-items: center; /* cross-axis выравнивание */

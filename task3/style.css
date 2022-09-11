@@ -37,7 +37,7 @@
     }
 }
 
-#container {
+#header {
     display: flex; /* флексбокс */
     align-items: center; /* cross-axis выравнивание */
     justify-content: center; /* main-axis выравнивание */
