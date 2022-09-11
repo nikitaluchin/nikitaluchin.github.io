@@ -9,7 +9,7 @@
 
   <body>
 
-    <header>
+    <header id="header">
         <div id="container">
             <img id="logo" src="logo.png" alt="xstratumm">
             <h1 id="name">Just a website</h1>
@@ -17,6 +17,17 @@
     </header>
 
     <div id="content">
+      <h3>Навигация:</h3>
+      <nav>
+        <ul>
+          <li><a href="#header" title="Шапка">Шапка</a></li>
+          <li><a href="#hyperlinks" title="Список гиперссылок">Список гиперссылок</a></li>
+          <li><a href="#form" title="HTML-форма">HTML-форма</a></li>
+          <li><a href="#table" title="HTML-таблица">HTML-таблица</a></li>
+          <li><a href="#footer" title="Подвал">Подвал</a></li>
+        </ul>
+      </nav>
+
       <h3 id="hyperlinks">Гиперссылки:</h3>
       <ol>
         <li><a href="http://example.com">HTTP example.com</a></li>
@@ -26,16 +37,6 @@
         <li><a href="https://example.com/#anchor">Ссылка на фрагмент страницы некоторого сайта</a></li>
         <li><a href="#paragraph">Ссылка на фрагмент текущей страницы</a></li>
         <li><a href="https://example.com/article?page=2&lang=en">Ссылка с двумя параметрами в URL</a></li>
-        <li>
-          <b>Навигация:</b>
-          <nav>
-            <ul>
-              <li><a href="#hyperlinks" title="Список гиперссылок">Список гиперссылок</a></li>
-              <li><a href="#form" title="HTML-форма">HTML-форма</a></li>
-              <li><a href="#table" title="HTML-таблица">HTML-таблица</a></li>
-            </ul>
-          </nav>
-        </li>
         <li><a>Ссылка без href</a></li>
         <li><a href="">Ссылка с пустым href</a></li>
         <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
@@ -98,7 +99,7 @@
         </tbody>
       </table>
 
-      <h3 id="form"><b>HTML-форма:</b></h3>
+      <h3 id="form">HTML-форма:</h3>
       <form action="https://example.com" method="POST">
         <label>
           Имя:<br>
@@ -172,7 +173,7 @@
       </form>
     </div>
 
-    <footer>
+    <footer id="footer">
       <span id="copyright">(c) xstratumm (Никита Лучин) <br> 2022</span>
     </footer>
 
