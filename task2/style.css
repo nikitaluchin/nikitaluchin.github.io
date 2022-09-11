@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(Montserrat-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat-Regular;
+}
+
+header {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    margin: 20px auto;
+}
+
+table {
+    text-align: center;
+}
+
+.even {
+    background-color: aqua;
+}
+
+.odd {
+    background-color: greenyellow;
+}
+
+.btn {
+    background-color: #1E4AD6;
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: 2px solid #1E4AD6;
+}
+
+.btn:hover {
+    background-color: white;
+    transition: 0.4s;
+    color: #1E4AD6;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#navigation {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#content {
+    margin-left: 20px;
+}
+
+#name {
+    font-size: 300%;
+    color: #1E4AD6;
+}
+
+#logo {
+    width: 20%;
+}
+
+#vklogo {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 5%;
+}
+
+#copyright {
+    font-family: Montserrat-Bold;
+    text-align: center;
+    font-size: 110%;
+}
