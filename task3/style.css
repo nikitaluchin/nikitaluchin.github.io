@@ -1,18 +1,16 @@
 @media only screen and (max-width: 768px)
 {
     #header {
-        background-color: black;
         font-size: 3vw;
-        gap: 20px;
+        gap: 7vw;
     }
 
     #header img {
-        margin-left: 30px;
+        margin-left: 7vw;
         width: 40vw;
     }
 
     #navigation {
-        background-color: red;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -23,7 +21,8 @@
     }
 
     .btn {
-        width: 50vw;
+        width: 40vw;
+        padding: 1px 10vw;
     }
 
     #content {
@@ -44,6 +43,10 @@
     #content {
         margin-left: 20px;
         /* display: flex; -- надо или нет? оно и так норм выглядит... */ 
+    }
+
+    .btn {
+        padding: 6px 10px;
     }
 }
 
@@ -77,27 +80,26 @@ table {
     text-align: center;
 }
 
+.btn {
+    background-color: #1E4AD6;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 2px solid #1E4AD6;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #1E4AD6;
+}
+
 .even {
     background-color: aqua;
 }
 
 .odd {
     background-color: greenyellow;
-}
-
-.btn {
-    background-color: #1E4AD6;
-    color: white;
-    text-decoration: none; /* убрать подчеркивание ссылки */
-    padding: 6px 10px; /* расширить "поле", чтобы кнопки выглядели крупнее */
-    border-radius: 3px; /* закругленные края */
-    border: 2px solid #1E4AD6; /* сплошная граница */
-    transition-duration: 0.4s; /* сокрытие через интервал */
-}
-
-.btn:hover {
-    background-color: white;
-    color: #1E4AD6;
 }
 
 #name {
