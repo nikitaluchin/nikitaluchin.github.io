@@ -37,31 +37,30 @@ table {
 .btn {
     background-color: #1E4AD6;
     color: white;
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 3px;
-    border: 2px solid #1E4AD6;
+    text-decoration: none; /* убрать подчеркивание ссылки */
+    padding: 6px 10px; /* расширить "поле", чтобы кнопки выглядели крупнее */
+    border-radius: 3px; /* закругленные края */
+    border: 2px solid #1E4AD6; /* сплошная граница */
+    transition-duration: 0.4s; /* сокрытие через интервал */
 }
 
 .btn:hover {
     background-color: white;
-    transition: 0.4s;
     color: #1E4AD6;
 }
 
 #container {
-    display: flex;
+    display: flex; /* флексбокс */
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* cross-axis выравнивание */
+    justify-content: center; /* main-axis выравнивание */
 }
 
 #navigation {
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 12px; /* отступы между детьми флекбокса */
 }
 
 #content {
