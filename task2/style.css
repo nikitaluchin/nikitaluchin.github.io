@@ -45,22 +45,25 @@ table {
     color: #1E4AD6;
 }
 
-#header {
-    display: flex; /* флексбокс */
+header {
     width: 100%;
-    align-items: center; /* cross-axis выравнивание */
-    justify-content: center; /* main-axis выравнивание */
+}
+
+#header img {
+    float: left;
+}
+
+#header h1 {
+    float: left;
+    margin-top: 130px; 
 }
 
 #navigation {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* отступы между детьми флекбокса */
-}
-
-#content {
-    margin-left: 20px;
+    gap: 12px;
 }
 
 #name {

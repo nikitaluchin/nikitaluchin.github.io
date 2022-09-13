@@ -10,22 +10,24 @@
   <body>
 
     <header>
-        <div id="header">
-            <img id="logo" src="logo.png" alt="xstratumm">
-            <h1 id="name">Just a website</h1>
-        </div>
+      <div id="header">
+        <img id="logo" src="logo.png" alt="xstratumm">
+        <h1 id="name">Just a website</h1>
+      </div>
     </header>
 
-    <nav id="navigation">
-      <a class="btn" href="#hyperlinks">Список гиперссылок</a>
-      <a class="btn" href="#table">HTML-таблица</a>
-      <a class="btn" href="#form">HTML-форма</a>
-      <a class="btn" href="#footer">Подвал</a>
+    <nav>
+        <div id="navigation">
+          <a class="btn" href="#hyperlinks">Список гиперссылок</a>
+          <a class="btn" href="#table">HTML-таблица</a>
+          <a class="btn" href="#form">HTML-форма</a>
+          <a class="btn" href="#footer">Подвал</a>
+        </div>
     </nav>
 
-    <div id="content">
+    <main>
 
-      <h3 id="hyperlinks">Гиперссылки:</h3>
+      <h3>Гиперссылки:</h3>
       <ol>
         <li><a href="http://example.com">HTTP example.com</a></li>
         <li><a href="https://example.com">HTTPS example.com</a></li>
@@ -59,7 +61,7 @@
         <li><a href="/about/about">Сокращенная на внутреннюю</a></li>
       </ol>
 
-      <h3 id="table">HTML-таблица</h3>
+      <h3>HTML-таблица</h3>
       <table>
         <thead>
           <tr class="even">
@@ -96,7 +98,7 @@
         </tbody>
       </table>
 
-      <h3 id="form">HTML-форма:</h3>
+      <h3>HTML-форма:</h3>
       <form action="https://example.com" method="POST">
         <label>
           Имя:<br>
@@ -168,9 +170,10 @@
           <input type="submit" value="Отправить">
         </label>
       </form>
-    </div>
+    
+    </main>
 
-    <footer id="footer">
+    <footer>
       <span id="copyright">(c) xstratumm (Никита Лучин) <br> 2022</span>
     </footer>
 
