@@ -21,6 +21,7 @@
 
     h3 {
         margin-left: 2vw;
+        font-size: 4vw;
     }
 
     .btn {
@@ -35,7 +36,7 @@
 
     #hyperlinks {
         order: 0;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     #hyperlinks ol {
@@ -53,12 +54,17 @@
     }
 
     #form {
-        margin: 0 auto;
+        margin: 2vw;
         order: 1;
     }
 
     #table {
+        margin: 0 auto;
         order: 2;
+    }
+
+    #table h3 {
+        text-align: center;
     }
 
     #copyright {
