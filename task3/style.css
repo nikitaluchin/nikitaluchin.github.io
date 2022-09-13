@@ -2,12 +2,12 @@
 {
     #header {
         font-size: 3vw;
-        gap: 7vw;
+        gap: 6vw;
     }
 
     #header img {
         margin-left: 7vw;
-        width: 40vw;
+        width: 42vw;
     }
 
     #navigation {
@@ -17,7 +17,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 100vw; /* 100vw = 100% ширины экрана браузера */
+    }
+
+    h3 {
+        margin-left: 2vw;
     }
 
     .btn {
@@ -27,7 +30,39 @@
 
     #content {
         display: flex;
-        margin-left: 20px;
+        flex-direction: column;
+    }
+
+    #hyperlinks {
+        order: 0;
+        font-size: 5vw;
+    }
+
+    #hyperlinks ol {
+        padding-left: 11vw;
+    }
+
+    #vklogo {
+        width: 15vw;
+        margin-top: 3vw;
+        margin-left: 20vw;
+    }
+
+    #figures {
+        width: 80vw;
+    }
+
+    #form {
+        margin: 0 auto;
+        order: 1;
+    }
+
+    #table {
+        order: 2;
+    }
+
+    #copyright {
+        font-size: 90%;
     }
 }
 
@@ -47,6 +82,16 @@
 
     .btn {
         padding: 6px 10px;
+    }
+
+    #vklogo {
+        margin-top: 10px;
+        margin-left: 50px;
+        width: 4%;
+    }
+
+    #copyright {
+        font-size: 110%;
     }
 }
 
@@ -111,14 +156,6 @@ table {
     width: 20%;
 }
 
-#vklogo {
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 8%;
-}
-
 #copyright {
     font-family: Montserrat-Bold;
-    text-align: center;
-    font-size: 110%;
 }
