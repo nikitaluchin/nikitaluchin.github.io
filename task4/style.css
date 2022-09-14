@@ -1,0 +1,167 @@
+@media only screen and (max-width: 768px)
+{
+    #header {
+        font-size: 3vw;
+        gap: 6vw;
+    }
+
+    #header img {
+        margin-left: 7vw;
+        width: 42vw;
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    h3 {
+        margin-left: 2vw;
+        font-size: 4vw;
+    }
+
+    .btn {
+        width: 40vw;
+        padding: 1px 10vw;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hyperlinks {
+        order: 0;
+        font-size: 4vw;
+    }
+
+    #hyperlinks ol {
+        padding-left: 11vw;
+    }
+
+    #vklogo {
+        width: 15vw;
+        margin-top: 3vw;
+        margin-left: 20vw;
+    }
+
+    #figures {
+        width: 80vw;
+    }
+
+    #form {
+        margin: 2vw;
+        order: 1;
+    }
+
+    #table {
+        margin: 0 auto;
+        order: 2;
+    }
+
+    #table h3 {
+        text-align: center;
+    }
+
+    #copyright {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #navigation {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #content {
+        margin-left: 20px;
+        /* display: flex; -- надо или нет? оно и так норм выглядит... */ 
+    }
+
+    .btn {
+        padding: 6px 10px;
+    }
+
+    #vklogo {
+        margin-top: 10px;
+        margin-left: 50px;
+        width: 4%;
+    }
+
+    #copyright {
+        font-size: 110%;
+    }
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(Montserrat-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat-Regular;
+}
+
+footer {
+    text-align: center;
+    margin: 20px auto;
+}
+
+table {
+    text-align: center;
+}
+
+.btn {
+    background-color: #1E4AD6;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 2px solid #1E4AD6;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #1E4AD6;
+}
+
+.even {
+    background-color: aqua;
+}
+
+.odd {
+    background-color: greenyellow;
+}
+
+#name {
+    font-size: 300%;
+    color: #1E4AD6;
+}
+
+#logo {
+    width: 20%;
+}
+
+#copyright {
+    font-family: Montserrat-Bold;
+}
