@@ -49,8 +49,12 @@
         margin-left: 20vw;
     }
 
-    #figures {
+    /* #figures {
         width: 80vw;
+    } */
+
+    #figures, #map_figures {
+        display: none;
     }
 
     #form {
@@ -81,19 +85,22 @@
         gap: 12px;
     }
 
-    #content {
-        margin-left: 20px;
-        /* display: flex; -- надо или нет? оно и так норм выглядит... */ 
-    }
-
     .btn {
         padding: 6px 10px;
+    }
+
+    #content {
+        margin-left: 20px;
     }
 
     #vklogo {
         margin-top: 10px;
         margin-left: 50px;
         width: 4%;
+    }
+
+    #figures_mobile, #map_figures_mobile_id {
+        display: none;
     }
 
     #copyright {
