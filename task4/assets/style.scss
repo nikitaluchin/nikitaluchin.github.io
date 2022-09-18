@@ -1,0 +1,142 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$mycolor: #1E4AD6;
+
+@include media-breakpoint-down(md) {
+    #header img {
+        width: 50vw;
+    }
+
+    #name {
+        font-size: 8vw;
+        color: $mycolor;
+    }
+
+    h3 {
+        font-size: 5vw;
+    }
+
+    .btn.btn-primary {
+        width: 55vw;
+    }
+
+    .d-flex {
+        gap: 4vw;
+    }
+
+    #hyperlinks {
+        order: 0;
+        font-size: 4vw;
+    }
+
+    #vklogo {
+        width: 15vw;
+        // margin-top: 3vw;
+        // margin-left: 20vw;
+    }
+
+    #figures, #map_figures {
+        display: none;
+    }
+
+    #form {
+        // margin: 2vw;
+        order: 1;
+    }
+
+    #table {
+        // margin: 0 auto;
+        order: 2;
+    }
+
+    #table h3 {
+        text-align: center; // мб с bootstrap?
+    }
+
+    #copyright {
+        font-size: 90%;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #name {
+        font-size: 3vw;
+    }
+
+    #logo {
+        width: 20vw;
+    }
+
+    .btn.btn-primary {
+        width: 13vw;
+    }
+
+    #vklogo {
+        // margin-top: 10px;
+        // margin-left: 50px;
+        width: 4%;
+    }
+
+    #figures_mobile, #map_figures_mobile_id {
+        display: none;
+    }
+
+    #copyright {
+        font-size: 110%;
+    }
+}
+
+#name {
+    font-weight: bold;
+    color: $mycolor;
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat-Regular;
+}
+
+footer {
+    text-align: center;
+    // margin: 20px auto;
+}
+
+table {
+    text-align: center; // bootstrap? 
+}
+
+.btn-primary {
+    background-color: $mycolor;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 2px solid $mycolor;
+    transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+    background-color: white !important;
+    color: $mycolor !important;
+}
+
+.even {
+    background-color: aqua;
+}
+
+.odd {
+    background-color: greenyellow;
+}
+
+#copyright {
+    font-family: Montserrat-Bold; // bootstrap?
+}

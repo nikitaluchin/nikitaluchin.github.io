@@ -10934,53 +10934,32 @@ textarea.form-control-lg {
     width: 50vw;
   }
   #name {
-    font-size: 10vw;
+    font-size: 8vw;
     color: #1E4AD6;
   }
-  #logo {
-    width: 50vw;
-  }
-  #navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
   h3, .h3 {
-    margin-left: 2vw;
-    font-size: 4vw;
+    font-size: 5vw;
   }
-  .btn {
-    width: 40vw;
-    padding: 1px 10vw;
+  .btn.btn-primary {
+    width: 55vw;
   }
-  #main-content {
-    display: flex;
-    flex-direction: column;
+  .d-flex {
+    gap: 4vw;
   }
   #hyperlinks {
     order: 0;
     font-size: 4vw;
   }
-  #hyperlinks ol {
-    padding-left: 11vw;
-  }
   #vklogo {
     width: 15vw;
-    margin-top: 3vw;
-    margin-left: 20vw;
   }
   #figures, #map_figures {
     display: none;
   }
   #form {
-    margin: 2vw;
     order: 1;
   }
   #table {
-    margin: 0 auto;
     order: 2;
   }
   #table h3, #table .h3 {
@@ -10991,22 +10970,16 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
-  #navigation {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+  #name {
+    font-size: 3vw;
   }
-  .btn {
-    padding: 6px 10px;
+  #logo {
+    width: 20vw;
   }
-  #main-content {
-    margin-left: 20px;
+  .btn.btn-primary {
+    width: 13vw;
   }
   #vklogo {
-    margin-top: 10px;
-    margin-left: 50px;
     width: 4%;
   }
   #figures_mobile, #map_figures_mobile_id {
@@ -11016,13 +10989,18 @@ textarea.form-control-lg {
     font-size: 110%;
   }
 }
+#name {
+  font-weight: bold;
+  color: #1E4AD6;
+}
+
 @font-face {
   font-family: Montserrat-Bold;
-  src: url(Montserrat-Bold.ttf);
+  src: url(fonts/Montserrat-Bold.ttf);
 }
 @font-face {
   font-family: Montserrat-Regular;
-  src: url(Montserrat-Regular.ttf);
+  src: url(fonts/Montserrat-Regular.ttf);
 }
 body {
   margin: 0;
@@ -11031,11 +11009,24 @@ body {
 
 footer {
   text-align: center;
-  margin: 20px auto;
 }
 
 table {
   text-align: center;
+}
+
+.btn-primary {
+  background-color: #1E4AD6;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid #1E4AD6;
+  transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+  background-color: white !important;
+  color: #1E4AD6 !important;
 }
 
 .even {
@@ -11044,14 +11035,6 @@ table {
 
 .odd {
   background-color: greenyellow;
-}
-
-#name {
-  color: #1E4AD6;
-}
-
-#logo {
-  width: 20%;
 }
 
 #copyright {

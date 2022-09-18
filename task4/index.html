@@ -7,30 +7,44 @@
     <title>Задание 4</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <script href="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
   </head>
 
   <body>
 
     <header id="header">
-      <div class="container-fluid d-flex justify-content-center align-items-center">
-          <img id="logo" src="logo.png" alt="xstratumm">
+      <div class="container-fluid d-flex justify-content-center align-items-center align-content-center">
+          <img id="logo" src="img/logo.png" alt="xstratumm">
           <h1 id="name">Just a website</h1>
       </div>
     </header>
 
     <nav>
-      <div id="navigation">
-        <a class="btn btn-primary" href="#hyperlinks" role="button">Список гиперссылок</a>
-        <a class="btn btn-primary" href="#table" role="button">HTML-таблица</a>
-        <a class="btn btn-primary" href="#form" role="button">HTML-форма</a>
-        <a class="btn btn-primary" href="#footer" role="button">Подвал</a>
+      <div class="container-fluid">
+        <!-- Выравнивание по сетке Bootstrap + Flexbox -->
+        <div class="row d-flex text-center justify-content-center align-items-center">
+          <!-- Mobile First с применением классов: md - кнопки, начиная с 768px width, выстраиваются в строку из колонок -->
+          <div class="col-md-2">
+            <!-- Padding средствами Bootstrap (p-1) -->
+            <a class="btn btn-primary p-1" href="#hyperlinks" role="button">Гиперссылки</a>
+          </div>
+          <div class="col-md-2">
+            <a class="btn btn-primary p-1" href="#form" role="button">HTML-форма</a>
+          </div>
+          <div class="col-md-2">
+            <a class="btn btn-primary p-1" href="#table" role="button">HTML-таблица</a>
+          </div>
+          <div class="col-md-2">
+            <a class="btn btn-primary p-1" href="#footer" role="button">Подвал</a>
+          </div>
+        </div>
       </div>
     </nav>
 
     <main>
 
-      <div id="main_content">
+      <!-- Margin средствами Bootstrap (mt-4, margin-top) -->
+      <div class="container-fluid d-flex flex-column mt-4">
 
         <div id="hyperlinks">
           <h3>Гиперссылки:</h3>
@@ -49,15 +63,15 @@
             <li><a href="https://example.com" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a></li>
             <!--/noindex-->
             <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
-            <li>Ссылка-изображение: <br> <a href="https://vk.com/xstratumm"><img id="vklogo" src="vklogo.png" alt="VK"></a></li>
+            <li>Ссылка-изображение: <br> <a href="https://vk.com/xstratumm"><img id="vklogo" src="img/vklogo.png" alt="VK"></a></li>
             <li>
               <p>Ссылки из прямоугольных и круглых областей картинки:</p>
-              <img id="figures_mobile" usemap="#map_figures_mobile" src="figures_mobile.png" alt="figures">
+              <img id="figures_mobile" usemap="#map_figures_mobile" src="img/figures_mobile.png" alt="figures">
               <map id="map_figures_mobile_id" name="map_figures_mobile">
                 <area shape="rect" coords="5,45,122,96" href="https://yandex.ru" alt="rect">
                 <area shape="circle" coords="195,77,48" href="https://brave.com" alt="circle">
               </map>
-              <img id="figures" usemap="#map_figures" src="figures.png" alt="figures">
+              <img id="figures" usemap="#map_figures" src="img/figures.png" alt="figures">
               <map name="map_figures">
                 <area shape="rect" coords="8,70,136,136" href="https://yandex.ru" alt="rect">
                 <area shape="rect" coords="332,42,411,173" href="https://google.ru" alt="rect">
