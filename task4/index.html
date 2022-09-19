@@ -14,7 +14,7 @@
 
     <header id="header">
       <div class="container-fluid d-flex justify-content-center align-items-center align-content-center">
-          <img id="logo" src="img/logo.png" alt="xstratumm">
+          <img src="img/logo.png" alt="xstratumm">
           <h1 id="name">Just a website</h1>
       </div>
     </header>
@@ -63,7 +63,11 @@
             <li><a href="https://example.com" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a></li>
             <!--/noindex-->
             <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
-            <li>Ссылка-изображение: <br> <a href="https://vk.com/xstratumm"><img id="vklogo" src="img/vklogo.png" alt="VK"></a></li>
+            <li>Ссылка-изображение: <br>
+              <a href="https://vk.com/xstratumm">
+                <img id="vklogo" src="img/vklogo.png" alt="VK">
+              </a>
+            </li>
             <li>
               <p>Ссылки из прямоугольных и круглых областей картинки:</p>
               <img id="figures_mobile" usemap="#map_figures_mobile" src="img/figures_mobile.png" alt="figures">
@@ -86,36 +90,36 @@
             <li><a href="/about/about">Сокращенная на внутреннюю</a></li>
           </ol>
         </div>
-  
-        <div id="table">
+        
+        <div>
           <h3>HTML-таблица</h3>
-          <table>
+          <table class="table text-center table-responsive-md table-primary table-striped table-hover table-borderless">
             <thead>
               <tr class="even">
-                <th>1-я колонка</th>
-                <th>2-я колонка</th>
-                <th>3-я колонка</th>
+                <th scope="col">1-я колонка</th>
+                <th scope="col">2-я колонка</th>
+                <th scope="col">3-я колонка</th>
               </tr>
             </thead>
     
             <tbody>
-              <tr class="odd">
+              <tr>
                 <td colspan="3">Объед-ые 11, 12, 13</td>
               </tr>
-              <tr class="even">
+              <tr>
                 <td>21</td>
                 <td>22</td>
                 <td>23</td>
               </tr>
-              <tr class="odd">
+              <tr>
                 <td colspan="2">Объед-ые 31, 32</td>
                 <td>33</td>
               </tr>
-              <tr class="even">
+              <tr>
                 <td>41</td>
                 <td colspan="2">Объед-ые 42, 43</td>
               </tr>
-              <tr class="odd">
+              <tr>
                 <td>51</td>
                 <td>52</td>
                 <td>53</td>
@@ -203,7 +207,7 @@
       
     </main>
 
-    <footer id="footer">
+    <footer class="mt-4 mb-3 text-center">
       <span id="copyright">(c) xstratumm (Никита Лучин) <br> 2022</span>
     </footer>
       

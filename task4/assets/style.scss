@@ -1,5 +1,15 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
 $mycolor: #1E4AD6;
 
 @include media-breakpoint-down(md) {
@@ -44,17 +54,14 @@ $mycolor: #1E4AD6;
         order: 1;
     }
 
-    #table {
+    .table {
         // margin: 0 auto;
+        width: 80vw;
         order: 2;
     }
 
-    #table h3 {
-        text-align: center; // мб с bootstrap?
-    }
-
     #copyright {
-        font-size: 90%;
+        font-size: 4.5vw;
     }
 }
 
@@ -63,7 +70,7 @@ $mycolor: #1E4AD6;
         font-size: 3vw;
     }
 
-    #logo {
+    #header img {
         width: 20vw;
     }
 
@@ -74,7 +81,11 @@ $mycolor: #1E4AD6;
     #vklogo {
         // margin-top: 10px;
         // margin-left: 50px;
-        width: 4%;
+        width: 4vw;
+    }
+
+    .table {
+        width: 35vw;
     }
 
     #figures_mobile, #map_figures_mobile_id {
@@ -82,8 +93,18 @@ $mycolor: #1E4AD6;
     }
 
     #copyright {
-        font-size: 110%;
+        font-size: 1.2vw;
     }
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat-Regular;
+}
+
+#name {
+    font-weight: bold;
+    color: $mycolor;
 }
 
 .btn.btn-nav {
@@ -93,61 +114,6 @@ $mycolor: #1E4AD6;
     transition-duration: 0.4s;
 }
 
-// .btn.btn-nav:hover {
-    // background-color: white;
-// }
-
-// .btn-primary {
-//     background-color: $mycolor;
-//     color: white;
-//     text-decoration: none;
-//     border-radius: 3px;
-//     border: 2px solid $mycolor;
-//     transition-duration: 0.4s;
-// }
-
-// .btn-primary:hover {
-//     background-color: white !important;
-//     color: $mycolor !important;
-// }
-
-#name {
-    font-weight: bold;
-    color: $mycolor;
-}
-
-@font-face {
-    font-family: Montserrat-Bold;
-    src: url(fonts/Montserrat-Bold.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Regular;
-    src: url(fonts/Montserrat-Regular.ttf);
-}
-
-body {
-    margin: 0;
-    font-family: Montserrat-Regular;
-}
-
-footer {
-    text-align: center;
-    // margin: 20px auto;
-}
-
-table {
-    text-align: center; // bootstrap? 
-}
-
-.even {
-    background-color: aqua;
-}
-
-.odd {
-    background-color: greenyellow;
-}
-
 #copyright {
-    font-family: Montserrat-Bold; // bootstrap?
+    font-family: Montserrat-Bold;
 }
