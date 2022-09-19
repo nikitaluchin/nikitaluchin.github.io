@@ -10940,7 +10940,7 @@ textarea.form-control-lg {
   h3, .h3 {
     font-size: 5vw;
   }
-  .btn.btn-primary {
+  .btn.btn-nav {
     width: 55vw;
   }
   .d-flex {
@@ -10976,8 +10976,8 @@ textarea.form-control-lg {
   #logo {
     width: 20vw;
   }
-  .btn.btn-primary {
-    width: 13vw;
+  .btn.btn-nav {
+    width: 13.5vw;
   }
   #vklogo {
     width: 4%;
@@ -10989,6 +10989,26 @@ textarea.form-control-lg {
     font-size: 110%;
   }
 }
+.btn.btn-nav {
+  --bs-btn-color: white;
+  --bs-btn-bg: #1E4AD6;
+  --bs-btn-border-color: #1E4AD6;
+  --bs-btn-hover-color: #1E4AD6;
+  --bs-btn-hover-bg: white;
+  --bs-btn-hover-border-color: #1E4AD6;
+  --bs-btn-focus-shadow-rgb: 64, 101, 220;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #183bab;
+  --bs-btn-active-border-color: #1738a1;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #1E4AD6;
+  --bs-btn-disabled-border-color: #1E4AD6;
+  border: 2px solid #1E4AD6;
+  border-radius: 3px;
+  transition-duration: 0.4s;
+}
+
 #name {
   font-weight: bold;
   color: #1E4AD6;
@@ -11013,20 +11033,6 @@ footer {
 
 table {
   text-align: center;
-}
-
-.btn-primary {
-  background-color: #1E4AD6;
-  color: white;
-  text-decoration: none;
-  border-radius: 3px;
-  border: 2px solid #1E4AD6;
-  transition-duration: 0.4s;
-}
-
-.btn-primary:hover {
-  background-color: white !important;
-  color: #1E4AD6 !important;
 }
 
 .even {

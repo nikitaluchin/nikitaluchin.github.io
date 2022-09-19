@@ -16,7 +16,7 @@ $mycolor: #1E4AD6;
         font-size: 5vw;
     }
 
-    .btn.btn-primary {
+    .btn.btn-nav {
         width: 55vw;
     }
 
@@ -67,8 +67,8 @@ $mycolor: #1E4AD6;
         width: 20vw;
     }
 
-    .btn.btn-primary {
-        width: 13vw;
+    .btn.btn-nav {
+        width: 13.5vw;
     }
 
     #vklogo {
@@ -85,6 +85,31 @@ $mycolor: #1E4AD6;
         font-size: 110%;
     }
 }
+
+.btn.btn-nav {
+    @include button-variant($mycolor, $mycolor, white, white, $mycolor, $mycolor);
+    border: 2px solid $mycolor;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+}
+
+// .btn.btn-nav:hover {
+    // background-color: white;
+// }
+
+// .btn-primary {
+//     background-color: $mycolor;
+//     color: white;
+//     text-decoration: none;
+//     border-radius: 3px;
+//     border: 2px solid $mycolor;
+//     transition-duration: 0.4s;
+// }
+
+// .btn-primary:hover {
+//     background-color: white !important;
+//     color: $mycolor !important;
+// }
 
 #name {
     font-weight: bold;
@@ -113,20 +138,6 @@ footer {
 
 table {
     text-align: center; // bootstrap? 
-}
-
-.btn-primary {
-    background-color: $mycolor;
-    color: white;
-    text-decoration: none;
-    border-radius: 3px;
-    border: 2px solid $mycolor;
-    transition-duration: 0.4s;
-}
-
-.btn-primary:hover {
-    background-color: white !important;
-    color: $mycolor !important;
 }
 
 .even {
