@@ -10991,7 +10991,7 @@ textarea.form-control-lg {
   .table {
     width: 35vw;
   }
-  #figures_mobile, #map_figures_mobile_id {
+  #figures_mobile, #map_figures_mobile {
     display: none;
   }
   #copyright {
