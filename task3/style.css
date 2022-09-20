@@ -1,116 +1,3 @@
-@media only screen and (max-width: 768px)
-{
-    #header {
-        font-size: 3vw;
-        gap: 6vw;
-    }
-
-    #header img {
-        margin-left: 7vw;
-        width: 42vw;
-    }
-
-    #navigation {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    h3 {
-        margin-left: 2vw;
-        font-size: 4vw;
-    }
-
-    .btn {
-        width: 40vw;
-        padding: 1px 10vw;
-    }
-
-    #content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #hyperlinks {
-        order: 0;
-        font-size: 4vw;
-    }
-
-    #hyperlinks ol {
-        padding-left: 11vw;
-    }
-
-    #vklogo {
-        width: 15vw;
-        margin-top: 3vw;
-        margin-left: 20vw;
-    }
-
-    #figures, #map_figures {
-        display: none;
-    }
-
-    #form {
-        margin: 2vw;
-        order: 1;
-    }
-
-    #table {
-        margin: 0 auto;
-        order: 2;
-    }
-
-    #table h3 {
-        text-align: center;
-    }
-
-    #copyright {
-        font-size: 90%;
-    }
-}
-
-@media only screen and (min-width: 769px) {
-    #navigation {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    #content {
-        margin-left: 20px;
-        /* display: flex; -- надо или нет? оно и так норм выглядит... */ 
-    }
-
-    .btn {
-        padding: 6px 10px;
-    }
-
-    #figures_mobile, #map_figures_mobile {
-        display: none;
-    }
-
-    #vklogo {
-        margin-top: 10px;
-        margin-left: 50px;
-        width: 4%;
-    }
-
-    #copyright {
-        font-size: 110%;
-    }
-}
-
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 @font-face {
     font-family: Montserrat-Bold;
     src: url(Montserrat-Bold.ttf);
@@ -126,35 +13,12 @@ body {
     font-family: Montserrat-Regular;
 }
 
-footer {
-    text-align: center;
-    margin: 20px auto;
-}
-
-table {
-    text-align: center;
-}
-
-.btn {
-    background-color: #1E4AD6;
-    color: white;
-    text-decoration: none;
-    border-radius: 3px;
-    border: 2px solid #1E4AD6;
-    transition-duration: 0.4s;
-}
-
-.btn:hover {
-    background-color: white;
-    color: #1E4AD6;
-}
-
-.even {
-    background-color: aqua;
-}
-
-.odd {
-    background-color: greenyellow;
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    gap: 6vw;
 }
 
 #name {
@@ -166,6 +30,168 @@ table {
     width: 20%;
 }
 
+#header img {
+    margin-left: 7vw;
+    width: 42vw;
+}
+
+#navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: #1E4AD6;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 2px solid #1E4AD6;
+    transition-duration: 0.4s;
+    width: 40vw;
+    padding: 1px 10vw;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #1E4AD6;
+}
+
+h3 {
+    margin-left: 2vw;
+    font-size: 4vw;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#hyperlinks {
+    order: 0;
+    font-size: 4vw;
+}
+
+#hyperlinks ol {
+    margin-left: 1vw;
+}
+
+#vklogo {
+    width: 15vw;
+    margin-top: 3vw;
+    margin-left: 20vw;
+}
+
+#figures, #map_figures {
+    display: none;
+}
+
+#form {
+    margin: 2vw;
+    order: 1;
+}
+
+#table {
+    margin: 0 auto;
+    order: 2;
+    text-align: center;
+}
+
+#table h3 {
+    text-align: center;
+}
+
+.even {
+    background-color: aqua;
+}
+
+.odd {
+    background-color: greenyellow;
+}
+
+footer {
+    text-align: center;
+    margin: 20px auto;
+}
+
 #copyright {
     font-family: Montserrat-Bold;
+    font-size: 90%;
+}
+
+/*
+The 'only' keyword prevents older browsers that do not support
+media queries with media features from applying the given styles.
+It has no effect on modern browsers.
+*/
+@media only screen and (min-width: 769px) {
+    #header {
+        font-size: 1vw;
+        gap: 0;
+    }
+
+    #header img {
+        margin-left: 0;
+        width: 20vw;
+    }
+
+    #navigation {
+        flex-direction: row;
+        gap: 2vw;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        width: 13.5vw;
+    }
+
+    h3 {
+        margin-left: 0;
+        font-size: 1.2vw;
+    }
+
+    #content {
+        margin-left: 1vw;
+    }
+
+    #hyperlinks {
+        font-size: 1.05vw;
+    }
+
+    #hyperlinks ol {
+        margin-left: 0;
+    }
+
+    #vklogo {
+        margin-top: 10px;
+        margin-left: 50px;
+        width: 4%;
+    }
+
+    #figures, #map_figures {
+        display: initial; /* default value of property */
+    }
+
+    #figures_mobile, #map_figures_mobile {
+        display: none;
+    }
+
+    #form {
+        margin: 0;
+    }
+
+    #table {
+        margin: 0;
+    }
+
+    #table h3 {
+        text-align: initial;
+    }
+
+    #copyright {
+        font-size: 110%;
+    }
 }
