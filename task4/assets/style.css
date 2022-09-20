@@ -10955,7 +10955,6 @@ textarea.form-control-lg {
     gap: 4vw;
   }
   #hyperlinks {
-    order: 0;
     font-size: 4vw;
   }
   #vklogo {
@@ -10964,12 +10963,8 @@ textarea.form-control-lg {
   #figures, #map_figures {
     display: none;
   }
-  #form {
-    order: 1;
-  }
   .table {
     width: 80vw;
-    order: 2;
   }
   #copyright {
     font-size: 4.5vw;
@@ -10981,6 +10976,9 @@ textarea.form-control-lg {
   }
   #header img {
     width: 20vw;
+  }
+  h3, .h3 {
+    font-size: 1.3vw;
   }
   .btn.btn-nav {
     width: 13.5vw;

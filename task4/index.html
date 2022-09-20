@@ -22,7 +22,7 @@
       <div class="container-fluid">
         <!-- Выравнивание по сетке Bootstrap + Flexbox -->
         <div class="row d-flex text-center justify-content-center align-items-center">
-          <!-- Mobile First с применением классов: md - кнопки, начиная с 768px width, выстраиваются в строку из колонок -->
+          <!-- Mobile First (есть еще ниже у таблицы) с применением классов: md - кнопки, начиная с 768px width, выстраиваются в строку из колонок -->
           <div class="col-md-2">
             <!-- Padding средствами Bootstrap (p-1) -->
             <a class="btn btn-nav p-1" href="#hyperlinks" role="button">Гиперссылки</a>
@@ -45,8 +45,9 @@
       <!-- Margin средствами Bootstrap (mt-4, margin-top) -->
       <div class="container-fluid d-flex flex-column mt-4">
 
-        <div id="hyperlinks">
-          <h3>Гиперссылки:</h3>
+        <!-- Flexbox order с помощью классов Bootstrap (см. также таблицу и форму) -->
+        <div class="order-0" id="hyperlinks">
+          <h3>Гиперссылки</h3>
           <ol>
             <li><a href="http://example.com">HTTP example.com</a></li>
             <li><a href="https://example.com">HTTPS example.com</a></li>
@@ -64,7 +65,8 @@
             <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
             <li>Ссылка-изображение: <br>
               <a href="https://vk.com/xstratumm">
-                <img id="vklogo" src="img/vklogo.png" alt="VK">
+                <!-- Margin средствами Bootstrap -->
+                <img class="mt-2 mb-2 ms-5" id="vklogo" src="img/vklogo.png" alt="VK">
               </a>
             </li>
             <li>
@@ -90,7 +92,8 @@
           </ol>
         </div>
         
-        <div>
+        <!-- Mobile First с применением классов Bootstrap -->
+        <div class="order-2 mt-3 mt-md-5">
           <h3 id="html_table">HTML-таблица</h3>
           <table class="table text-center table-responsive-md table-primary table-striped table-hover table-borderless">
             <thead>
@@ -127,16 +130,16 @@
           </table>
         </div>
   
-        <div id="html_form">
-          <h3>HTML-форма:</h3>
+        <div class="order-1" id="html_form">
+          <h3>HTML-форма</h3>
           <form action="https://example.com" method="POST">
             <label>
               Имя:<br>
               <input name="name" placeholder="введите ваше имя"> 
             </label><br><br>
             <label>
-              E-mail:<br>
-              <input name="email" placeholder="введите ваш e-mail">
+              E-mail:<br> 
+              <input class="mt-1" name="email" placeholder="введите ваш e-mail">
             </label><br><br>
             <label>
               Дата рождения:<br>
@@ -152,19 +155,19 @@
               мужской
             </label><br><br>
               Количество конечностей:<br>
-            <label>
+            <label class="me-3">
               <input type="radio" name="limb" value="0">
               0
             </label>
-            <label>
+            <label class="me-3">
               <input type="radio" name="limb" value="1">
               1
             </label>
-            <label>
+            <label class="me-3">
               <input type="radio" name="limb" value="2">
               2
             </label>
-            <label>
+            <label class="me-3">
               <input type="radio" name="limb" value="3">
               3
             </label>
@@ -185,19 +188,19 @@
                 <option value="levitation" selected>
                   левитация
                 </option>
-              </select><br><br>
-            </label>
+              </select>
+            </label><br><br>
             <label>
               Биография:<br>
               <textarea name="biography" placeholder="напишите вашу биографию"></textarea>
             </label><br><br>
             <label>
               С контрактом ознакомлен (а):
-              <input type="checkbox" name="agreement">
+              <input class="ms-2" type="checkbox" name="agreement">
             </label><br><br>
             <label>
               Сформировать заявку:
-              <input type="submit" value="Отправить">
+              <input class="ms-2" type="submit" value="Отправить">
             </label>
           </form>
         </div>

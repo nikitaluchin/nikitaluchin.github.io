@@ -35,29 +35,19 @@ $mycolor: #1E4AD6;
     }
 
     #hyperlinks {
-        order: 0;
         font-size: 4vw;
     }
 
     #vklogo {
         width: 15vw;
-        // margin-top: 3vw;
-        // margin-left: 20vw;
     }
 
     #figures, #map_figures {
         display: none;
     }
 
-    #form {
-        // margin: 2vw;
-        order: 1;
-    }
-
     .table {
-        // margin: 0 auto;
         width: 80vw;
-        order: 2;
     }
 
     #copyright {
@@ -74,13 +64,15 @@ $mycolor: #1E4AD6;
         width: 20vw;
     }
 
+    h3 {
+        font-size: 1.3vw;
+    }
+
     .btn.btn-nav {
         width: 13.5vw;
     }
 
     #vklogo {
-        // margin-top: 10px;
-        // margin-left: 50px;
         width: 4vw;
     }
 
