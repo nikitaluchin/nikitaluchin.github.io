@@ -13,21 +13,34 @@ body {
     font-family: Montserrat-Regular;
 }
 
-footer {
-    text-align: center;
-    margin: 20px auto;
+header {
+    width: 100%;
 }
 
-table {
-    text-align: center;
+#header img {
+    float: left;
 }
 
-.even {
-    background-color: aqua;
+#header h1 {
+    float: left;
+    margin-top: 130px; 
 }
 
-.odd {
-    background-color: greenyellow;
+#logo {
+    width: 20%;
+}
+
+#name {
+    font-size: 300%;
+    color: #1E4AD6;
+}
+
+#navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 .btn {
@@ -45,41 +58,29 @@ table {
     color: #1E4AD6;
 }
 
-header {
-    width: 100%;
-}
-
-#header img {
-    float: left;
-}
-
-#header h1 {
-    float: left;
-    margin-top: 130px; 
-}
-
-#navigation {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-#name {
-    font-size: 300%;
-    color: #1E4AD6;
-}
-
-#logo {
-    width: 20%;
-}
-
 #vklogo {
     margin-top: 10px;
     margin-left: 50px;
     width: 5%;
 }
+
+table {
+    text-align: center;
+}
+
+.even {
+    background-color: aqua;
+}
+
+.odd {
+    background-color: greenyellow;
+}
+
+footer {
+    text-align: center;
+    margin: 20px auto;
+}
+
 
 #copyright {
     font-family: Montserrat-Bold;

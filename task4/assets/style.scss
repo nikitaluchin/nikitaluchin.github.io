@@ -12,47 +12,56 @@
 
 $mycolor: #1E4AD6;
 
-@include media-breakpoint-down(md) {
-    #header img {
-        width: 50vw;
-    }
+body {
+    margin: 0;
+    font-family: Montserrat-Regular;
+}
 
-    #name {
-        font-size: 8vw;
-        color: $mycolor;
-    }
+#header img {
+    width: 50vw;
+}
 
-    h3 {
-        font-size: 5vw;
-    }
+#name {
+    font-size: 8vw;
+    color: $mycolor;
+    font-weight: bold;
+}
 
-    .btn.btn-nav {
-        width: 55vw;
-    }
+h3 {
+    font-size: 5vw;
+}
 
-    .d-flex {
-        gap: 4vw;
-    }
+.btn.btn-nav {
+    @include button-variant($mycolor, $mycolor, white, white, $mycolor, $mycolor);
+    border: 2px solid $mycolor;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+    width: 55vw;
+}
 
-    #hyperlinks {
-        font-size: 4vw;
-    }
+.d-flex {
+    gap: 4vw;
+}
 
-    #vklogo {
-        width: 15vw;
-    }
+#hyperlinks {
+    font-size: 4vw;
+}
 
-    #figures, #map_figures {
-        display: none;
-    }
+#vklogo {
+    width: 15vw;
+}
 
-    .table {
-        width: 80vw;
-    }
+#figures, #map_figures {
+    display: none;
+}
 
-    #copyright {
-        font-size: 4.5vw;
-    }
+.table {
+    width: 80vw;
+}
+
+#copyright {
+    font-size: 4.5vw;
+    font-family: Montserrat-Bold;
 }
 
 @include media-breakpoint-up(md) {
@@ -99,25 +108,4 @@ $mycolor: #1E4AD6;
     #copyright {
         font-size: 1.2vw;
     }
-}
-
-body {
-    margin: 0;
-    font-family: Montserrat-Regular;
-}
-
-#name {
-    font-weight: bold;
-    color: $mycolor;
-}
-
-.btn.btn-nav {
-    @include button-variant($mycolor, $mycolor, white, white, $mycolor, $mycolor);
-    border: 2px solid $mycolor;
-    border-radius: 3px;
-    transition-duration: 0.4s;
-}
-
-#copyright {
-    font-family: Montserrat-Bold;
 }
