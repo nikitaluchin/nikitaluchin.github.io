@@ -10971,11 +10971,11 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
-  #name {
-    font-size: 3vw;
-  }
   #header img {
     width: 20vw;
+  }
+  #name {
+    font-size: 3vw;
   }
   h3, .h3 {
     font-size: 1.3vw;
@@ -10983,14 +10983,23 @@ textarea.form-control-lg {
   .btn.btn-nav {
     width: 13.5vw;
   }
+  .d-flex {
+    gap: 0;
+  }
+  #hyperlinks {
+    font-size: 1.05vw;
+  }
   #vklogo {
     width: 4vw;
   }
-  .table {
-    width: 35vw;
+  #figures, #map_figures {
+    display: initial;
   }
   #figures_mobile, #map_figures_mobile {
     display: none;
+  }
+  .table {
+    width: 35vw;
   }
   #copyright {
     font-size: 1.2vw;
