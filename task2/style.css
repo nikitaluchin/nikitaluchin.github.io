@@ -17,6 +17,11 @@ header {
     width: 100%;
 }
 
+#header {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 #header img {
     float: left;
 }
@@ -27,11 +32,11 @@ header {
 }
 
 #logo {
-    width: 20%;
+    width: 30%;
 }
 
 #name {
-    font-size: 300%;
+    font-size: 250%;
     color: #1E4AD6;
 }
 
@@ -58,6 +63,11 @@ header {
     color: #1E4AD6;
 }
 
+#content {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
 #vklogo {
     margin-top: 10px;
     margin-left: 50px;
@@ -77,13 +87,12 @@ table {
 }
 
 footer {
-    text-align: center;
     margin: 20px auto;
 }
 
 
 #copyright {
     font-family: Montserrat-Bold;
-    text-align: center;
     font-size: 110%;
+    text-align: left;
 }

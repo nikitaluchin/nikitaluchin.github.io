@@ -25,7 +25,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="content">
 
       <h3 id="hyperlinks">Гиперссылки:</h3>
       <ol>
@@ -65,38 +65,29 @@
       <table>
         <thead>
           <tr class="even">
-            <th>1-я колонка</th>
-            <th>2-я колонка</th>
-            <th>3-я колонка</th>
-            <th>4-я колонка</th>
+            <td>Колонка 1</td>
+            <td>Колонка 2</td>
+            <td>Колонка 3</td>
           </tr>
         </thead>
-
         <tbody>
           <tr class="odd">
-            <td colspan="3">Объед-ые 11, 12, 13</td>
-            <td>14</td>
+            <td>11</td>
+            <td>12</td>
+            <td rowspan="2">Ячейка c rowspan</td>
           </tr>
           <tr class="even">
-            <td>21</td>
-            <td>22</td>
-            <td>23</td>
-            <td>24</td>
+            <td colspan="2">21 и 22</td>
           </tr>
           <tr class="odd">
-            <td colspan="2">Объед-ые 31, 32</td>
-            <td colspan="2">Объед-ые 33, 34</td>
+            <td>31</td>
+            <td colspan="2">32 и 33</td>
           </tr>
           <tr class="even">
-            <td colspan="4">Объед-ые 41, 42, 43, 44</td>
-          </tr>
-          <tr class="odd">
-            <td>51</td>
-            <td colspan="2">Объед-ые 52, 53</td>
-            <td>54</td>
+            <td colspan="3">41, 42 и 43</td>
           </tr>
         </tbody>
-      </table>
+        </table>
 
       <h3 id="form">HTML-форма:</h3>
       <form action="https://example.com" method="POST">
@@ -174,7 +165,7 @@
     </main>
 
     <footer id="footer">
-      <span id="copyright">(c) xstratumm (Никита Лучин) <br> 2022</span>
+      <span id="copyright">(c) xstratumm (Никита Лучин) 2022</span>
     </footer>
 
   </body>
