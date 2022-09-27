@@ -51,8 +51,8 @@ body {
     border-radius: 3px;
     border: 2px solid #1E4AD6;
     transition-duration: 0.4s;
-    width: 40vw;
-    padding: 1px 10vw;
+    width: 38vw;
+    padding: 5px 10vw;
 }
 
 .btn:hover {
@@ -129,23 +129,39 @@ It has no effect on modern browsers.
 */
 @media only screen and (min-width: 769px) {
     #header {
+        display: block;
+        max-width: 960px;
+        margin: 0 auto;
         font-size: 1vw;
-        gap: 0;
+    }
+
+    #header h1 {
+        float: left;
+        margin-top: 130px;
     }
 
     #header img {
         margin-left: 0;
+        float: left;
         width: 20vw;
     }
 
     #navigation {
         flex-direction: row;
         gap: 2vw;
+        clear: left; /* сделать элемент ниже в потоке после float: left эл-в */
     }
 
     .btn {
         padding: 6px 10px;
-        width: 13.5vw;
+        width: 12vw;
+    }
+
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+        margin-top: 4vw;
+
     }
 
     h3 {
@@ -154,7 +170,8 @@ It has no effect on modern browsers.
     }
 
     #content {
-        margin-left: 1vw;
+        display: block;
+        clear: left;
     }
 
     #hyperlinks {
