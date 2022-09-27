@@ -170,12 +170,12 @@ It has no effect on modern browsers.
     }
 
     #content {
-        display: block;
         clear: left;
     }
 
     #hyperlinks {
         font-size: 1.05vw;
+        order: 0;
     }
 
     #hyperlinks ol {
@@ -198,10 +198,12 @@ It has no effect on modern browsers.
 
     #form {
         margin: 0;
+        order: 2;
     }
 
     #table {
         margin: 0;
+        order: 1;
     }
 
     #table h3 {
