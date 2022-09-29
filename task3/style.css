@@ -13,6 +13,10 @@ body {
     font-family: Montserrat-Regular;
 }
 
+header {
+    width: 100vw;
+}
+
 #header {
     display: flex;
     align-items: center;

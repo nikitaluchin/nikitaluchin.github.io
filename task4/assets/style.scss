@@ -1,3 +1,19 @@
+$mycolor: #1E4AD6;
+
+/* _functions.scss are needed to change map,
+and _variables.scss contains $spacers */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// SASS map for custom spacers' sizes
+$myspacers: (
+    6: $spacer * 5,
+    7: $spacer * 8,
+);
+
+$spacers: map-merge($spacers, $myspacers);
+
+// Import the rest of BS5 to update spacers
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 @font-face {
@@ -10,11 +26,12 @@
     src: url(fonts/Montserrat-Regular.ttf);
 }
 
-$mycolor: #1E4AD6;
-
 body {
-    margin: 0;
     font-family: Montserrat-Regular;
+}
+
+header {
+    width: 100vw;
 }
 
 #header img {
@@ -65,6 +82,12 @@ h3 {
 }
 
 @include media-breakpoint-up(md) {
+    #header {
+        max-width: 960px; // это не для header, а для div
+                          // внутри. для header: 100vw width 
+        font-size: 1vw;
+    }
+
     #header img {
         width: 20vw;
     }
@@ -73,8 +96,8 @@ h3 {
         font-size: 3vw;
     }
 
-    h3 {
-        font-size: 1.3vw;
+    #navigation {
+        clear: left;
     }
 
     .btn.btn-nav {
@@ -83,6 +106,14 @@ h3 {
 
     .d-flex {
         gap: 0;
+    }
+
+    main {
+        max-width: 960px;
+    }
+
+    h3 {
+        font-size: 1.3vw;
     }
 
     #hyperlinks {

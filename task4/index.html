@@ -9,17 +9,17 @@
     <link href="assets/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="m-0">
 
-    <header id="header">
-      <div class="container-fluid d-flex justify-content-center align-items-center">
-          <img src="img/logo.png" alt="xstratumm">
-          <h1 id="name">Just a website</h1>
+    <header id="header" class="mx-auto">
+      <div class="container d-flex d-md-block justify-content-center align-items-center">
+          <img class="float-md-start" src="img/logo.png" alt="xstratumm">
+          <h1 class="float-md-start mt-md-7" id="name">Just a website</h1>
       </div>
     </header>
 
     <nav>
-      <div class="container-fluid">
+      <div id="navigation" class="container-fluid">
         <!-- Выравнивание по сетке Bootstrap + Flexbox -->
         <div class="row d-flex text-center justify-content-center align-items-center">
           <!-- Mobile First (есть еще ниже у таблицы) с применением классов: md - кнопки, начиная с 768px width, выстраиваются в строку из колонок -->
@@ -40,7 +40,7 @@
       </div>
     </nav>
 
-    <main>
+    <main class="mx-auto">
 
       <!-- Margin средствами Bootstrap (mt-4, margin-top) -->
       <div class="container-fluid d-flex flex-column mt-4">
@@ -93,7 +93,7 @@
         </div>
         
         <!-- Mobile First с применением классов Bootstrap -->
-        <div class="order-2 mt-3 mt-md-5">
+        <div class="order-2 order-md-1 mt-3 mt-md-5">
           <h3 id="html_table">HTML-таблица</h3>
           <table class="table text-center table-responsive-md table-primary table-striped table-hover table-borderless">
             <thead>
@@ -130,7 +130,7 @@
           </table>
         </div>
   
-        <div class="order-1 mt-md-4" id="html_form">
+        <div class="order-1 order-md-2 mt-md-4" id="html_form">
           <h3>HTML-форма</h3>
           <form action="https://example.com" method="POST">
             <label>
@@ -209,8 +209,8 @@
       
     </main>
 
-    <footer class="mt-4 mb-3 text-center">
-      <span id="copyright">(c) xstratumm (Никита Лучин) <br> 2022</span>
+    <footer class="mt-4 mb-3 text-center text-md-start">
+      <span id="copyright">(c) xstratumm 2022</span>
     </footer>
       
   </body>
