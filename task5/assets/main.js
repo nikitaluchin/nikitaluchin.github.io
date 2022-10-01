@@ -16,7 +16,7 @@ function onClick() {
         result.innerHTML = "Я вам насчитал тут: " + intAmount * intCost;
     } else {
         // сработает при "123@", например
-        result.innerHTML = "А я хочу цифры!";
+        result.innerHTML = "Ну зачем вы так :(";
     }
 }
 
