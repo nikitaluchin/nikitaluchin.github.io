@@ -11758,6 +11758,7 @@ h3, .h3 {
 #result {
   color: #1E4AD6;
   font-weight: bold;
+  font-size: 5.5vw;
 }
 
 #copyright {
@@ -11818,6 +11819,9 @@ h3, .h3 {
   }
   .calc-input {
     width: 10vw;
+  }
+  #result {
+    font-size: 1.2vw;
   }
   #copyright {
     font-size: 1.2vw;

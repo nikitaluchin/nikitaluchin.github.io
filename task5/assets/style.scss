@@ -101,6 +101,7 @@ h3 {
 #result {
     color: $mycolor;
     font-weight: bold;
+    font-size: 5.5vw;
 }
 
 #copyright {
@@ -178,6 +179,10 @@ h3 {
 
     .calc-input {
         width: 10vw;
+    }
+
+    #result {
+        font-size: 1.2vw;
     }
 
     #copyright {
