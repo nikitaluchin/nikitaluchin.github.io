@@ -13,7 +13,7 @@ function onClick() {
     if (amount[0].value === "" || cost[0].value === "") {
         result.style.color = "red";
         result.innerHTML = "Можно не надо так делать...";
-    } else if ((checkAmount || checkCost) === null) {
+    } else if (checkAmount === null && checkCost === null) {
         result.style.color = MY_COLOR;
         let intAmount = parseInt(amount[0].value);
         let intCost = parseInt(cost[0].value);
@@ -25,6 +25,7 @@ function onClick() {
     }
 }
 
+// event в арг-е function не пишем, т.к. не исп-тся
 window.addEventListener("DOMContentLoaded", function () {
     let btn = document.getElementById("btn-calc");
     btn.addEventListener("click", onClick);
