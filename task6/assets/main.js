@@ -81,6 +81,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
             let target = event.target;
             let amount = parseInt(fieldAmount[0].value);
+
             if (fieldAmount[0].value !== "") {
                 purchase.style.color = MY_COLOR;
                 if (target.value === "0") {
@@ -98,6 +99,7 @@ window.addEventListener("DOMContentLoaded", function () {
     africa[0].addEventListener("change", function (event) {
         let target = event.target;
         let amount = parseInt(fieldAmount[0].value);
+
         if (fieldAmount[0].value !== "") {
             purchase.style.color = MY_COLOR;
             if (target.checked) {
@@ -117,29 +119,33 @@ window.addEventListener("DOMContentLoaded", function () {
         let checkAmount = target.value.match(re);
 
         if (checkAmount === null) {
-            purchase.style.color = MY_COLOR;
+            if (target.value !== "") {
+                purchase.style.color = MY_COLOR;
 
-            let amount = parseInt(target.value);
+                let amount = parseInt(target.value);
 
-            if (select[0].value === "0") {
-                price = amount * priceList.maxim;
-                purchase.innerHTML = "Цена Максимов: " + price;
-            } else if (select[0].value === "1") {
-                if (radioBtns[0].checked) {
-                    price = amount * priceList.artem[1];
-                    purchase.innerHTML = "Цена Артемов: " + price;
+                if (select[0].value === "0") {
+                    price = amount * priceList.maxim;
+                    purchase.innerHTML = "Цена Максимов: " + price;
+                } else if (select[0].value === "1") {
+                    if (radioBtns[0].checked) {
+                        price = amount * priceList.artem[1];
+                        purchase.innerHTML = "Цена Артемов: " + price;
+                    } else {
+                        price = amount * priceList.artem[0];
+                        purchase.innerHTML = "Цена Артемов: " + price;
+                    }
                 } else {
-                    price = amount * priceList.artem[0];
-                    purchase.innerHTML = "Цена Артемов: " + price;
+                    if (africa[0].checked) {
+                        price = amount * priceList.yarik[1];
+                        purchase.innerHTML = "Цена Яфриканцев: " + price;
+                    } else {
+                        price = amount * priceList.yarik[0];
+                        purchase.innerHTML = "Цена Яриков: " + price;
+                    }
                 }
             } else {
-                if (africa[0].checked) {
-                    price = amount * priceList.yarik[1];
-                    purchase.innerHTML = "Цена Яфриканцев: " + price;
-                } else {
-                    price = amount * priceList.yarik[0];
-                    purchase.innerHTML = "Цена Яриков: " + price;
-                }
+                purchase.innerHTML = "";
             }
         } else {
             purchase.style.color = "red";
