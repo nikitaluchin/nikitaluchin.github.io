@@ -11661,63 +11661,8 @@ body {
   font-family: Montserrat-Regular;
 }
 
-header {
-  width: 100vw;
-}
-
-#header img {
-  width: 50vw;
-}
-
-#name {
-  font-size: 8vw;
-  color: #1E4AD6;
-  font-weight: bold;
-}
-
 h3, .h3 {
   font-size: 5vw;
-}
-
-.btn.btn-nav {
-  --bs-btn-color: white;
-  --bs-btn-bg: #1E4AD6;
-  --bs-btn-border-color: #1E4AD6;
-  --bs-btn-hover-color: #1E4AD6;
-  --bs-btn-hover-bg: white;
-  --bs-btn-hover-border-color: #1E4AD6;
-  --bs-btn-focus-shadow-rgb: 64, 101, 220;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #183bab;
-  --bs-btn-active-border-color: #1738a1;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #1E4AD6;
-  --bs-btn-disabled-border-color: #1E4AD6;
-  border: 2px solid #1E4AD6;
-  border-radius: 3px;
-  transition-duration: 0.4s;
-  width: 55vw;
-}
-
-.d-flex {
-  gap: 4vw;
-}
-
-#hyperlinks {
-  font-size: 4vw;
-}
-
-#vklogo {
-  width: 15vw;
-}
-
-#figures, #map_figures {
-  display: none;
-}
-
-.table {
-  width: 80vw;
 }
 
 #calc-name {
@@ -11760,51 +11705,12 @@ h3, .h3 {
   font-size: 5.5vw;
 }
 
-#copyright {
-  font-size: 4.5vw;
-  font-family: Montserrat-Bold;
-}
-
 @media (min-width: 768px) {
-  #header {
-    max-width: 960px;
-    font-size: 1vw;
-  }
-  #header img {
-    width: 20vw;
-  }
-  #name {
-    font-size: 3vw;
-  }
-  #navigation {
-    clear: left;
-  }
-  .btn.btn-nav {
-    width: 13.5vw;
-  }
-  .d-flex {
-    gap: 0;
-  }
   main {
     max-width: 960px;
   }
   h3, .h3 {
     font-size: 1.3vw;
-  }
-  #hyperlinks {
-    font-size: 1.05vw;
-  }
-  #vklogo {
-    width: 4vw;
-  }
-  #figures, #map_figures {
-    display: initial;
-  }
-  #figures_mobile, #map_figures_mobile {
-    display: none;
-  }
-  .table {
-    width: 35vw;
   }
   #calc-form {
     font-size: initial;
@@ -11820,9 +11726,6 @@ h3, .h3 {
     width: 10vw;
   }
   #result {
-    font-size: 1.2vw;
-  }
-  #copyright {
     font-size: 1.2vw;
   }
 }/*# sourceMappingURL=style.css.map */

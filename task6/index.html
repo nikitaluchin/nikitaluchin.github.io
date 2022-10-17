@@ -9,265 +9,68 @@
     <link href="assets/style.css" rel="stylesheet">
   </head>
 
-  <body class="m-0">
+  <body>
 
-    <header id="header" class="mx-auto">
-      <div class="container d-flex d-md-block justify-content-center align-items-center">
-          <img class="float-md-start" src="img/logo.png" alt="xstratumm">
-          <h1 class="float-md-start mt-md-7" id="name">Just a website</h1>
-      </div>
-    </header>
+    <main>
 
-    <nav>
-      <div id="navigation" class="container-fluid">
-        <!-- Выравнивание по сетке Bootstrap + Flexbox -->
-        <div class="row d-flex text-center justify-content-center align-items-center">
-          <!-- Mobile First (есть еще ниже у таблицы) с применением классов: md - кнопки, начиная с 768px width, выстраиваются в строку из колонок -->
-          <div class="col-md-2">
-            <!-- Padding средствами Bootstrap (p-1) -->
-            <a class="btn btn-nav p-1" href="#hyperlinks" role="button">Гиперссылки</a>
+      <div>
+        <h3 id="calc-name">JS-powered калькулятор</h3>
+        <form id="calc-form" class="mt-5">
+          У нас богатый ассортимент!<br><br>
+          <label>
+            <select name="prod-type">
+              <option disabled selected>Тип товара</option>
+              <option value="0">
+                Максим
+              </option>
+              <option value="1">
+                Артем
+              </option>
+              <option value="2">
+                Ярик
+              </option>
+            </select>
+          </label><br>
+          <div class="mt-3" id="prod-radios">
+            <label>
+              <input type="radio" name="size" value="0">
+              большой
+            </label>
+            <label>
+              <input type="radio" name="size" value="1">
+              маленький
+            </label>
           </div>
-          <div class="col-md-2">
-            <a class="btn btn-nav p-1" href="#html_form" role="button">HTML-форма</a>
-          </div>
-          <div class="col-md-2">
-            <a class="btn btn-nav p-1" href="#html_table" role="button">HTML-таблица</a>
-          </div>
-          <div class="col-md-2">
-            <a class="btn btn-nav p-1" href="#copyright" role="button">Подвал</a>
-          </div>
-        </div>
-      </div>
-    </nav>
+          <div class="mt-3" id="prod-checkbox">
+            из Африки?
+            <input type="checkbox" name="africa">
+          </div><br>
 
-    <main class="mx-auto">
+          <div id="amount">
+            Количество товара:<br>
+            <input class="calc-input mt-2" name="prod-amount" type="text">
+          </div><br>
+          <div id="purchase"></div><br><br>
 
-      <!-- Margin средствами Bootstrap (mt-4, margin-top) -->
-      <div class="container-fluid d-flex flex-column mt-4">
-
-        <!-- Flexbox order с помощью классов Bootstrap (см. также таблицу и форму) -->
-        <div class="order-0" id="hyperlinks">
-          <h3>Гиперссылки</h3>
-          <ol>
-            <li><a href="http://example.com">HTTP example.com</a></li>
-            <li><a href="https://example.com">HTTPS example.com</a></li>
-            <li><a href="ftp://example.com/test.txt"> FTP без авторизации test.txt</a></li>
-            <li><a href="ftp://user:passwd@example.com/test.txt">FTP с авторизацией test.txt</a></li>
-            <li><a href="https://example.com/#anchor">Ссылка на фрагмент страницы некоторого сайта</a></li>
-            <li><a href="#paragraph">Ссылка на фрагмент текущей страницы</a></li>
-            <li><a href="https://example.com/article?page=2&lang=en">Ссылка с двумя параметрами в URL</a></li>
-            <li><a>Ссылка без href</a></li>
-            <li><a href="">Ссылка с пустым href</a></li>
-            <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
-            <!--noindex-->
-            <li><a href="https://example.com" rel="nofollow">Ссылка, запрещенная для индексации поисковиками</a></li>
-            <!--/noindex-->
-            <li><p id="paragraph">Контекстная <a href="https://example.com">ссылка</a> в тексте абзаца</p></li>
-            <li>Ссылка-изображение: <br>
-              <a href="https://vk.com/xstratumm">
-                <!-- Margin средствами Bootstrap -->
-                <img class="mt-2 mb-2 ms-5" id="vklogo" src="img/vklogo.png" alt="VK">
-              </a>
-            </li>
-            <li>
-              <p>Ссылки из прямоугольных и круглых областей картинки:</p>
-              <img id="figures_mobile" usemap="#map_figures_mobile" src="img/figures_mobile.png" alt="figures">
-              <map id="map_figures_mobile" name="map_figures_mobile">
-                <area shape="rect" coords="5,45,122,96" href="https://yandex.ru" alt="rect">
-                <area shape="circle" coords="195,77,48" href="https://brave.com" alt="circle">
-              </map>
-              <img id="figures" usemap="#map_figures" src="img/figures.png" alt="figures">
-              <map name="map_figures">
-                <area shape="rect" coords="8,70,136,136" href="https://yandex.ru" alt="rect">
-                <area shape="rect" coords="332,42,411,173" href="https://google.ru" alt="rect">
-                <area shape="circle" coords="225,101,70" href="https://brave.com" alt="circle">
-              </map>
-            </li>
-            <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-            <li><a href="about/page2.html">Относительная ссылка на странице в каталоге about</a></li>
-            <li><a href="../page3.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-            <li><a href="../../page4.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-            <li><a href="/">Сокращенная на главную</a></li>
-            <li><a href="/about/about">Сокращенная на внутреннюю</a></li>
-          </ol>
-        </div>
-        
-        <!-- Mobile First с применением классов Bootstrap -->
-        <div class="order-2 order-md-1 mt-3 mt-md-5">
-          <h3 id="html_table">HTML-таблица</h3>
-          <table class="table text-center table-responsive-md table-primary table-striped table-hover table-borderless">
-            <thead>
-              <tr class="even">
-                <th scope="col">1-я колонка</th>
-                <th scope="col">2-я колонка</th>
-                <th scope="col">3-я колонка</th>
-              </tr>
-            </thead>
-    
-            <tbody>
-              <tr>
-                <td colspan="3">Объед-ые 11, 12, 13</td>
-              </tr>
-              <tr>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-              </tr>
-              <tr>
-                <td colspan="2">Объед-ые 31, 32</td>
-                <td>33</td>
-              </tr>
-              <tr>
-                <td>41</td>
-                <td colspan="2">Объед-ые 42, 43</td>
-              </tr>
-              <tr>
-                <td>51</td>
-                <td>52</td>
-                <td>53</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <label>
+            Количество:<br>
+            <input class="calc-input mt-2" name="amount" type="text">
+          </label><br><br>
+          <label>
+            Стоимость:<br>
+            <input class="calc-input mt-2" name="cost" type="text">
+          </label><br><br>
+          <label>
+            <button class="btn btn-calc" type="button" id="btn-calc">Рассчитать</button>
+          </labeL><br>
+          <div class="mt-4" id="result"></div>
+        </form>
   
-        <div class="order-1 order-md-2 mt-md-4" id="html_form">
-          <h3>HTML-форма</h3>
-          <form action="https://example.com" method="POST">
-            <label>
-              Имя:<br>
-              <input name="name" placeholder="введите ваше имя"> 
-            </label><br><br>
-            <label>
-              E-mail:<br> 
-              <input class="mt-1" name="email" placeholder="введите ваш e-mail">
-            </label><br><br>
-            <label>
-              Дата рождения:<br>
-              <input class="mt-1" name="birthdate" value="2003-05-26" type="date">
-            </label><br><br>
-            <label>
-              Пол:<br>
-              <input type="radio" name="gender" value="жен">
-              женский 
-            </label>
-            <label>
-              <input type="radio" name="gender" value="муж">
-              мужской
-            </label><br><br>
-              Количество конечностей:<br>
-            <label class="me-3">
-              <input type="radio" name="limb" value="0">
-              0
-            </label>
-            <label class="me-3">
-              <input type="radio" name="limb" value="1">
-              1
-            </label>
-            <label class="me-3">
-              <input type="radio" name="limb" value="2">
-              2
-            </label>
-            <label class="me-3">
-              <input type="radio" name="limb" value="3">
-              3
-            </label>
-            <label>
-              <input type="radio" name="limb" value="4">
-              4
-            </label>
-            <br><br>
-            <label>
-              Сверхспособности:<br>
-              <select class="mt-1" name="field-superpower[]" multiple>
-                <option value="immortality" selected>
-                  бессмертие
-                </option>
-                <option value="walk-through">
-                  прохождение сквозь стены
-                </option>
-                <option value="levitation" selected>
-                  левитация
-                </option>
-              </select>
-            </label><br><br>
-            <label>
-              Биография:<br>
-              <textarea name="biography" placeholder="напишите вашу биографию"></textarea>
-            </label><br><br>
-            <label>
-              С контрактом ознакомлен (а):
-              <input class="ms-2" type="checkbox" name="agreement">
-            </label><br><br>
-            <label>
-              Сформировать заявку:
-              <input class="ms-2" type="submit" value="Отправить">
-            </label>
-          </form>
-        </div>
-
-        <div class="order-3 mt-3 mt-md-5">
-          <h3 id="calc-name">JS-powered калькулятор</h3>
-          <form id="calc-form" class="mt-5">
-            У нас богатый ассортимент!<br><br>
-            <label>
-              <select name="prod-type">
-                <option disabled selected>Тип товара</option>
-                <option value="0">
-                  Максим
-                </option>
-                <option value="1">
-                  Артем
-                </option>
-                <option value="2">
-                  Ярик
-                </option>
-              </select>
-            </label><br>
-            <div class="mt-3" id="prod-radios">
-              <label class="ms-2">
-                <input type="radio" name="size" value="0">
-                большой
-              </label>
-              <label class="ms-2">
-                <input type="radio" name="size" value="1">
-                маленький
-              </label>
-            </div>
-            <div class="mt-3" id="prod-checkbox">
-              из Африки?
-              <input class="ms-2" type="checkbox" name="africa">
-            </div><br>
-
-            <div id="amount">
-              Количество товара:<br>
-              <input class="calc-input mt-2" name="prod-amount" type="text">
-            </div><br>
-            <div id="purchase"></div><br><br>
-
-            <label>
-              Количество:<br>
-              <input class="calc-input mt-2" name="amount" type="text">
-            </label><br><br>
-            <label>
-              Стоимость:<br>
-              <input class="calc-input mt-2" name="cost" type="text">
-            </label><br><br>
-            <label>
-              <button class="btn btn-calc" type="button" id="btn-calc">Рассчитать</button>
-            </labeL><br>
-            <div class="mt-4" id="result"></div>
-          </form>
-    
-        </div>
-        
       </div>
-      
+        
     </main>
 
-    <footer class="mt-5 mb-3 text-center text-md-start">
-      <span id="copyright">(c) xstratumm 2022</span>
-    </footer>
-    
     <script src="assets/main.js" defer></script>
+    
   </body>
 </html>

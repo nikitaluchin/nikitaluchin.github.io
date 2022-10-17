@@ -30,50 +30,8 @@ body {
     font-family: Montserrat-Regular;
 }
 
-header {
-    width: 100vw;
-}
-
-#header img {
-    width: 50vw;
-}
-
-#name {
-    font-size: 8vw;
-    color: $mycolor;
-    font-weight: bold;
-}
-
 h3 {
     font-size: 5vw;
-}
-
-.btn.btn-nav {
-    @include button-variant($mycolor, $mycolor, white, white, $mycolor, $mycolor);
-    border: 2px solid $mycolor;
-    border-radius: 3px;
-    transition-duration: 0.4s;
-    width: 55vw;
-}
-
-.d-flex {
-    gap: 4vw;
-}
-
-#hyperlinks {
-    font-size: 4vw;
-}
-
-#vklogo {
-    width: 15vw;
-}
-
-#figures, #map_figures {
-    display: none;
-}
-
-.table {
-    width: 80vw;
 }
 
 #calc-name {
@@ -107,64 +65,13 @@ h3 {
     font-size: 5.5vw;
 }
 
-#copyright {
-    font-size: 4.5vw;
-    font-family: Montserrat-Bold;
-}
-
 @include media-breakpoint-up(md) {
-    #header {
-        max-width: 960px; // это не для header, а для div
-                          // внутри. для header: 100vw width 
-        font-size: 1vw;
-    }
-
-    #header img {
-        width: 20vw;
-    }
-
-    #name {
-        font-size: 3vw;
-    }
-
-    #navigation {
-        clear: left;
-    }
-
-    .btn.btn-nav {
-        width: 13.5vw;
-    }
-
-    .d-flex {
-        gap: 0;
-    }
-
     main {
         max-width: 960px;
     }
 
     h3 {
         font-size: 1.3vw;
-    }
-
-    #hyperlinks {
-        font-size: 1.05vw;
-    }
-
-    #vklogo {
-        width: 4vw;
-    }
-
-    #figures, #map_figures {
-        display: initial; // initial = default value of css property
-    }
-
-    #figures_mobile, #map_figures_mobile {
-        display: none;
-    }
-
-    .table {
-        width: 35vw;
     }
 
     #calc-form {
