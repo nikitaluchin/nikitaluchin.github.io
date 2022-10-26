@@ -1,0 +1,60 @@
+$mycolor: #1E4AD6;
+
+/* _functions.scss are needed to change map,
+and _variables.scss contains $spacers */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// SASS map for custom spacers' sizes
+$myspacers: (
+    6: $spacer * 5,
+    7: $spacer * 8,
+    8: $spacer * 15,
+);
+
+$spacers: map-merge($spacers, $myspacers);
+
+// Import the rest of BS5 to update spacers
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-color: lightblue;
+}
+
+.slider img {
+    width: 100px;
+}
+
+.slick-dots {
+    // по умолчанию absolute и от слайдера не заработает
+    position: relative;
+
+    li {
+        margin: 10px 8px;
+    }
+	
+    li button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    li.slick-active button {
+        background-color: $mycolor;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .slider {
+        margin-top: 100px;
+    
+        img {
+            width: 140px;
+        }
+    }
+
+    .slick-dots li {
+        margin: 10px 25px;
+    }
+}

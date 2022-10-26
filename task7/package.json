@@ -1,0 +1,10 @@
+{
+  "name": "just_a_website",
+  "version": "1.0.0",
+  "author": "xstratumm",
+  "dependencies": {
+    "bootstrap": ">=5.2.1",
+    "jquery": ">=3.6.1",
+    "slick-carousel": ">=1.8.1"
+  }
+}
