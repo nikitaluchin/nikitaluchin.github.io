@@ -1,39 +1,38 @@
 body {
-	color:#2718dc;
+  color: #1E4AD6;
 }
 
 main {
-	max-width: 960px;
-	font-size: 5vw;
+  max-width: 960px;
+  font-size: 5vw;
 }
 
 #popup {
-	position: absolute;
-	display: none;
-	width: 100vw;
-	background-color: rgb(0, 0, 0, 0.7);
-	height: 100vh;
-	top: 0px;
-	left: 0px;
+  position: absolute;
+  display: none;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  top: 0px;
+  left: 0px;
 }
 
 #popup form {
-	width: 100vw;
-	border-width: 3px;
-	background-color: lightblue;
+  width: 100vw;
+  border-width: 3px;
+  background-color: lightblue;
 }
 
 textarea {
-	overflow: auto;
-    resize: none;
+  overflow: auto;
+  resize: none;
 }
 
 @media screen and (min-width: 768px) {
-	#popup form {
-		max-width: 50vw;
-	}
-
-	textarea {
-		resize: vertical;
-	}
-}
+  #popup form {
+    max-width: 50vw;
+  }
+  textarea {
+    resize: vertical;
+  }
+}/*# sourceMappingURL=style.css.map */
