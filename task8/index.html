@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<title>Задание 8</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+</head>
+<body class="container-fluid m-0 p-0">
+	<main>
+		<button type="button" class="btn btn-primary" id="buttonFormShow">Форма с использованием XHR</button>
+	</main>
+	<div id="popup" class="text-center">
+		<form class="mt-md-2 p-2 border rounded mx-auto" method="POST" action="https://formcarry.com/s/jkNxqbdMD">
+			<!-- form-check-label & others - predefined BS5, to-storage - mine (in js) -->
+			<label for="name" class="form-check-label">Имя:</label>
+			<input type="text" class="form-control to-storage" id="name" required name="name"> <br>
+
+			<label for="email" class="form-check-label">E-mail:</label>
+			<input type="email" class="form-control to-storage" id="email" required name="email"> <br>
+
+			<label for="message" class="form-check-label">Текст сообщения:</label> <br>
+			<textarea id="message" class="form-control to-storage" rows="8" required name="message"></textarea> <br>
+
+			<input type="checkbox" class="form-check-input" id="checkbox" required name="agreement" value="agreed">
+			<label for="checkbox" class="form-check-label">Согласны, узнали</label> <br>
+
+			<!-- type != submit, otherwise won't work -->
+			<!-- & in XHR examples "button" is being used -->
+			<button type="button" class="btn btn-primary mt-4" id="formSubmit">Отправить</button>
+			<!-- here will be the message about error or success -->
+			<div id="result"></div>
+		</form>
+	</div>
+	<script src="main.js" defer></script>
+</body>
+</html>
