@@ -6,25 +6,25 @@ window.addEventListener("DOMContentLoaded", function() {
     либо клавиши назад-вперед в самом браузере - срабатывает
     popstate
     */
-    window.addEventListener("popstate", formShow);
+    window.addEventListener("popstate", show);
     let buttonFormShow = document.getElementById("buttonFormShow");
     buttonFormShow.addEventListener("click", function () {
         // страница обновляется и добавляется объект history.state
         // причем меняется URL сайта - как сказано в задании
         history.pushState({"form": true}, "", "?form=true");
-        formShow();
+        show();
     });
     // чтобы при перезагрузки страницы форма все равно показывалась
-    formShow();
+    show();
     let inputs = document.querySelectorAll(".to-storage");
     // при каждом изменении поля обновляем localStorage
-    inputs.forEach(function(input) {input.addEventListener("input", saveData);} );
+    inputs.forEach(function(input) {input.addEventListener("input", save);} );
     let formButton = document.getElementById("formSubmit");
-    formButton.addEventListener("click", sendForm);
+    formButton.addEventListener("click", send);
 });
 
 // либо отображает, либо скрывает попап
-function formShow() {
+function show() {
     let popup = document.getElementById("popup");
     if (history.state != null && history.state.form === true) {
         popup.style.display = "block";
@@ -38,11 +38,11 @@ function formShow() {
     }
 }
 
-function saveData() {
+function save() {
     localStorage.setItem(this.id, this.value);
 }
 
-function sendForm(){
+function send(){
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
