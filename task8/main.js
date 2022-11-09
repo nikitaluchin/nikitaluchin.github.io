@@ -14,6 +14,8 @@ window.addEventListener("DOMContentLoaded", function() {
         history.pushState({"form": true}, "", "?form=true");
         formShow();
     });
+    // чтобы при перезагрузки страницы форма все равно показывалась
+    formShow();
     let inputs = document.querySelectorAll(".to-storage");
     // при каждом изменении поля обновляем localStorage
     inputs.forEach(function(input) {input.addEventListener("input", saveData);} );
