@@ -10,7 +10,7 @@ header('Content-Type: text/html; charset=UTF-8');
 print_r($_POST);
 
 // Hello World
-print('Привет, мир!');
+print('Hello, world!');
 
 // Чтобы получить в переменную данные из сущности запроса.
 $xml = file_get_contents('php://input');
