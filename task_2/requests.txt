@@ -1,0 +1,43 @@
+Сначала копируем нужный запрос, затем в сmd пишем telnet u53004.kubsu-dev.ru 80 и жмем Enter
+После этого тыкаем правой кнопкой по окну консоли
+(таким образом вставляя запрос, который копировали ранее) и жмем 2 раза Enter
+Если все прошло хорошо, покажется HTTP-ответ от сервера в виде текста
+
+В PuTTY дважды Enter
+1)
+[ в HTTP 1.0 необяз указывать Host.
+либо /index.html, либо / резалт тот же ]
+GET /index.html HTTP/1.0
+2)
+GET /task_2/ HTTP/1.1
+Host: u53004.kubsu-dev.ru
+3)
+[ HEAD запрашивает заголовки, идентичные тем, что
+возвращаются, если указанный ресурс будет
+запрошен с помощью HTTP-метода GET.
+Ответ на метод HEAD не должен содержать тело.
+т.о. узнаем размер без скачивания.
+Content-Length - размер файла в байтах ]
+HEAD /task_2/file.tar.gz HTTP/1.1
+Host: u53004.kubsu-dev.ru
+4)
+[ Content-Type: image/png ]
+HEAD /task_2/image.png HTTP/1.1
+Host: u53004.kubsu-dev.ru
+5)
+[ строка вида comment=ваш_комментарий - в pdf ]
+POST /task_2/index.php HTTP/1.1
+Host: u53004.kubsu-dev.ru
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 20
+
+comment=data_science
+6)
+[ сделал 99, т.к. Content-Length показывает на 1 больше ]
+GET /task_2/file.tar.gz HTTP/1.1
+Host: u53004.kubsu-dev.ru
+Range: bytes=0-99
+7)
+[ Content-Type: text/html; charset=UTF-8 ]
+HEAD /task_2/index.php HTTP/1.1
+Host: u53004.kubsu-dev.ru
