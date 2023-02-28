@@ -11902,6 +11902,12 @@ body {
   background-color: lightblue;
 }
 
+.text {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 50px;
+}
+
 .slider img {
   margin-top: 100px;
   width: 640px;
