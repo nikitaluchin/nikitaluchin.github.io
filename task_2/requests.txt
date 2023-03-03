@@ -9,7 +9,7 @@
 либо /index.html, либо / резалт тот же ]
 GET /index.html HTTP/1.0
 2)
-GET /task_2/ HTTP/1.1
+GET /task_2/index.php HTTP/1.1
 Host: u53004.kubsu-dev.ru
 3)
 [ HEAD запрашивает заголовки, идентичные тем, что
@@ -31,7 +31,7 @@ Host: u53004.kubsu-dev.ru
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 20
 
-comment=data_science
+passion=data_science
 6)
 [ сделал 99, т.к. Content-Length показывает на 1 больше ]
 GET /task_2/file.tar.gz HTTP/1.1
