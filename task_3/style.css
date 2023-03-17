@@ -1,0 +1,11 @@
+html {
+	background: linear-gradient(to bottom, #0bc9d0, #050aa8); 
+    min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+body {
+	color:#ffffff;
+	margin:30px auto 0;
+    width: fit-content;
+}
