@@ -10,7 +10,7 @@ body {
     width: fit-content;
 }
 .error {
-    box-shadow: inset 0px 0px 0px 20px red;
+    background-color: red;
 }
 .error-message {
 	color: red;
