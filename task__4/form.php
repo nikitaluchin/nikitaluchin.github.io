@@ -7,6 +7,8 @@
 <body>
 
 <?php
+// Если есть сообщения об ошибках или "Спасибо, результаты сохранены"
+// print() выдаст HTML-код, который будет обработан браузером
 if (!empty($messages)) {
     print('<div id="messages">');
     // Выводим все сообщения.
@@ -17,12 +19,15 @@ if (!empty($messages)) {
 }
 
 // Далее выводим форму отмечая элементы с ошибками классом error
-// и задавая начальные значения элементов ранее сохраненными.
+// и задавая начальные значения элементов ранее сохраненными
 ?>
 
 <form action="" method="POST">
     <label>
         Имя:<br>
+        <!-- конкатенация производится с помощью '.' -->
+        <!-- если errors['name'] = true, т.е. произошла ошибка с именем, то пометим его классом error (подстветка красным) -->
+        <!-- при этом значением будет либо пустая строка, либо последнее валидное значение -->
         <input name="name"
                placeholder="Имя" required <?php print('value="' . $values['name'] . '"'); if ($errors['name']) print(' class="error"'); ?>>
     </label><br>
@@ -47,24 +52,28 @@ if (!empty($messages)) {
 
     Пол: <br>
     <label><input type="radio"
-                  name="gender" value="0" required <?php if(intval($values['gender'])==0) print ("checked");  if ($errors['gender']) print(' class="error"');?>>
+                  name="gender" value="0" required <?php if(intval($values['gender'])==0) print("checked");  if ($errors['gender']) print(' class="error"');?>>
         Мужской</label>
     <label><input type="radio"
-                  name="gender" value="1" required <?php if(intval($values['gender'])==1) print ("checked"); if ($errors['gender']) print(' class="error"');?>>
+                  name="gender" value="1" required <?php if(intval($values['gender'])==1) print("checked"); if ($errors['gender']) print(' class="error"');?>>
         Женский</label><br>
 
     Количество: <br>
-    <label><input type="radio"
-                  name="limbs" value="1" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==1) print ("checked"); if ($errors['limbs']) print(' class="error"');?>>
+    <label>
+        <!-- !$values['limbs'] - отрицаем int, получаем ноль -->
+        <!-- и сравниваем с пустой строкой (проверка с приведением типов), -->
+        <!-- т.е. проверяем, есть ли там что-то -->
+        <input type="radio"
+                  name="limbs" value="1" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==1) print("checked"); if ($errors['limbs']) print(' class="error"');?>>
         1</label>
     <label><input type="radio"
-                  name="limbs" value="2" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==2) print ("checked"); if ($errors['limbs']) print(' class="error"');?>>
+                  name="limbs" value="2" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==2) print("checked"); if ($errors['limbs']) print(' class="error"');?>>
         2</label>
     <label><input type="radio"
-                  name="limbs" value="3" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==3) print ("checked"); if ($errors['limbs']) print(' class="error"');?>>
+                  name="limbs" value="3" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==3) print("checked"); if ($errors['limbs']) print(' class="error"');?>>
         3</label>
     <label><input type="radio"
-                  name="limbs" value="4" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==4) print ("checked"); if ($errors['limbs']) print(' class="error"');?>>
+                  name="limbs" value="4" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==4) print("checked"); if ($errors['limbs']) print(' class="error"');?>>
         4</label><br>
 
     <label>
@@ -72,9 +81,9 @@ if (!empty($messages)) {
         <br>
         <select name="powers[]"
                 multiple="multiple">
-            <option value="Invincibility" <?php if(intval($values['invincibility'])==1) print ("selected") ?>>Бессмертие</option>
-            <option value="Noclip" <?php if(intval($values['noclip'])==1) print ("selected") ?>>Хождение сквозь стены</option>
-            <option value="Levitation" <?php if(intval($values['levitation'])==1) print ("selected") ?>>Левитация</option>
+            <option value="Invincibility" <?php if(intval($values['invincibility'])==1) print("selected") ?>>Бессмертие</option>
+            <option value="Noclip" <?php if(intval($values['noclip'])==1) print("selected") ?>>Хождение сквозь стены</option>
+            <option value="Levitation" <?php if(intval($values['levitation'])==1) print("selected") ?>>Левитация</option>
         </select>
     </label><br>
 
@@ -85,10 +94,11 @@ if (!empty($messages)) {
 
     Согласие c лицензионным соглашением:<br>
     <label><input type="checkbox"
-                  name="check" required <?php if(intval($values['check'])==1) print ("checked"); if ($errors['check']) print(' class="error"'); ?>>
+                  name="check" required <?php if(intval($values['check'])==1) print("checked"); if ($errors['check']) print(' class="error"'); ?>>
         Да</label><br>
 
     <input type="submit" value="Отправить">
+    <!-- При нажатии на кнопку будет отправлен POST-запрос на index.php -->
 </form>
 </body>
 </html>
