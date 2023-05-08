@@ -22,6 +22,6 @@ INSERT INTO Ability (a_name) VALUES ('Noclip');
 CREATE TABLE Person_Ability (
   p_id int(10) unsigned NOT NULL,
   a_id int(10) unsigned NOT NULL,
-  FOREIGN KEY (p_id)  REFERENCES Person (p_id),
+  FOREIGN KEY (p_id) REFERENCES Person (p_id),
   FOREIGN KEY (a_id) REFERENCES Ability (a_id)
 );

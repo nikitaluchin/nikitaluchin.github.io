@@ -7,9 +7,11 @@
 <body>
 
 <?php
+// Если есть сообщения об ошибках или "Спасибо, результаты сохранены"
+// print() выдаст HTML-код, который будет обработан браузером
 if (!empty($messages)) {
     print('<div id="messages">');
-    // Выводим все сообщения.
+    // Выводим все сообщения
     foreach ($messages as $message) {
         print($message);
     }
@@ -17,12 +19,15 @@ if (!empty($messages)) {
 }
 
 // Далее выводим форму отмечая элементы с ошибками классом error
-// и задавая начальные значения элементов ранее сохраненными.
+// и задавая начальные значения элементов ранее сохраненными
 ?>
 <a href="./login.php">Форма авторизации</a>
 <form action="" method="POST">
     <label>
         Имя:<br>
+        <!-- конкатенация производится с помощью '.' -->
+        <!-- если errors['name'] = true, т.е. произошла ошибка с именем, то пометим его классом error (подстветка красным) -->
+        <!-- при этом значением будет либо пустая строка, либо последнее валидное значение -->
         <input name="name"
                placeholder="Имя" required <?php print('value="' . $values['name'] . '"'); if ($errors['name']) print(' class="error"'); ?>>
     </label><br>
@@ -54,7 +59,11 @@ if (!empty($messages)) {
         Женский</label><br>
 
     Количество: <br>
-    <label><input type="radio"
+    <label>
+        <!-- !$values['limbs'] - отрицаем int, получаем ноль -->
+        <!-- и сравниваем с пустой строкой (проверка с приведением типов), -->
+        <!-- т.е. проверяем, есть ли там что-то -->
+        <input type="radio"
                   name="limbs" value="1" required <?php if(!$values['limbs']=='' && intval($values['limbs'])==1) print ("checked"); if ($errors['limbs']) print(' class="error"');?>>
         1</label>
     <label><input type="radio"
@@ -89,6 +98,7 @@ if (!empty($messages)) {
         Да</label><br>
 
     <input type="submit" value="Отправить">
+    <!-- При нажатии на кнопку будет отправлен POST-запрос на index.php -->
 </form>
 </body>
 </html>

@@ -11,6 +11,7 @@ body {
 }
 .error {
     background-color: red;
+	box-shadow: 0 0 7px 1px red;
 }
 .error-message {
 	color: red;
