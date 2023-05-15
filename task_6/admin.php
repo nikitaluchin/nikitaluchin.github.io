@@ -11,15 +11,20 @@
  **/
 
 function authorize() {
+    // 
     header('HTTP/1.1 401 Unanthorized');
+    // realm - область безопасности (место с хранимой информацией на сервере, для доступа
+    // к которой нужен соотв-й пароль)
+    // отправляем информацию браузеру о том, как нужно авторизовываться
     header('WWW-Authenticate: Basic realm="My site"');
     print('<h1>401 Требуется авторизация</h1>');
     exit();
 }
 
-// Пример HTTP-аутентификации.
+// Пример HTTP-аутентификации
 // PHP хранит логин и пароль в суперглобальном массиве $_SERVER.
 // Подробнее см. стр. 26 и 99 в учебном пособии Веб-программирование и веб-сервисы.
+// Если мы не авторизованы, мы авторизуемся
 if (empty($_SERVER['PHP_AUTH_USER']) ||
     empty($_SERVER['PHP_AUTH_PW'])) {
   authorize();
@@ -41,7 +46,10 @@ if (!$isAdmin) {
     authorize();
 }
 
+// Если мы тут, то мы админ
+
 if ($_SERVER['REQUEST_METHOD']=="GET") {
+    // в $_GET['delete'] хранится ID юзера, которого удаляем
     if (!empty($_GET['delete'])) {
         $stmt = $db->prepare("DELETE FROM Person_Ability WHERE p_id=:p_id;");
         $stmtErr = $stmt->execute(['p_id' => $_GET['delete']]);
@@ -59,6 +67,12 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
         $stmt = $db->prepare("SELECT * FROM Ability;");
         $stmtErr =  $stmt -> execute();
         $abilities = $stmt->fetchAll();
+        // для удобства запишем в $person значения способностей
+        // почему удобно:
+        // 1. в PersonAbility храним a_id, а удобнее хранить имена
+        // 2. в PersonAbility храним кортежами, а здесь будем ключ-значение, имя способности и 0/1
+        // 3. если способности нет, будет четко указано, что = 0
+        // сначала пробегаемся по всем способностям и говорим, что у человека их нет
         foreach ($abilities as $ability) {
             $person[$ability['a_name']] = 0;
         }
@@ -67,6 +81,9 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
         $person['Noclip']=0;
         $person['Levitation']=0;
         */
+
+        // а теперь смотрим, какие способности есть у человека
+        // если она есть, даем значение 1
         foreach ($personAbilities as $personAbility) {
             foreach ($abilities as $ability) {
                 if ($ability['a_id'] == $personAbility['a_id']) {
@@ -88,6 +105,7 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
             }
             */
         }
+        // сохраняем в куки ID пользователя, которого будем изменять
         setcookie('changed_uid', $person['p_id'], time() + 30 * 24 * 60 * 60);
         ?>
     <p>Изменение данный пользователя с ID <?php print ($person['p_id']);?></p>
@@ -171,7 +189,9 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
 <input type="submit" value="Отправить">
 </form>
 <?php
+    // после вывода формы останавливаем выполнение кода
     exit();
+    // либо мы delete, либо мы change, либо мы просто получаем таблицу для юзеров
     }
     print('Вы успешно авторизовались и видите защищенные паролем данные.');
 
@@ -182,7 +202,7 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
     $stmtErr = $stmt->execute();
     $resultAbility = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    print ('<table>
+    print('<table>
 	<thead>
 		<tr>
 			<td>ID</td>
@@ -202,23 +222,24 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
 	<tbody>');
 
     foreach ($result as $person) {
-        print ('<tr>');
+        print('<tr>');
         foreach ($person as $key => $value) {
             if ($key=="gender") print ('<td>' . ($value=="0" ? "Муж" : "Жен") . '</td>');
             else print('<td>' . $value . '</td>');
         }
-        print ('<td>');
+        print('<td>');
         foreach ($resultAbility as $personAbility) {
             if ($personAbility['p_id'] == $person['p_id']){
                 switch ($personAbility['a_id']) {
+                    // мы уже показывали, что можно не делать switch
                     case 1:
-                        print ('Невидимость ');
+                        print('Неуязвимость ');
                         break;
                     case 3:
-                        print ('Ходить сквозь стены ');
+                        print('Ходить сквозь стены ');
                         break;
                     case 2:
-                        print ('Левитация ');
+                        print('Левитация ');
                         break;
                 }
             }
@@ -231,6 +252,7 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
     print ('</tbody>
     </table>');
 
+    // ищем для каждой способности кол-во человек, ей обладающей
     $stmt = $db->prepare("SELECT COUNT(1), a_id FROM Person_Ability GROUP BY a_id;");
     $stmtErr = $stmt->execute();
     $statistics = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -238,7 +260,7 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
         print ('<p>' . $statistic['COUNT(1)'] . ' человек обладают ');
         switch ($statistic['a_id']) {
             case 1:
-                print ('невидимостью ');
+                print ('неуязвимостью ');
                 break;
             case 3:
                 print ('хождением сквозь стены ');
@@ -250,10 +272,11 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
         print ('</p>');
     }
 
-} else {
+// если мы обновляем данные для пользователя
+} else if ($_SERVER['REQUEST_METHOD']=="POST") {
     $stmt = $db->prepare("UPDATE Person SET p_name= :name, mail= :mail, year= :year, gender= :gender, limbs_num= :limbs_num, biography= :biography, p_login=:p_login, p_pass=:p_pass where p_id = :p_id");
+    // вытаскиваем из $_COOKIE['changed_uid'] id человека
     $stmtErr = $stmt->execute(['p_id' => $_COOKIE['changed_uid'], 'name' => $_POST['name'],'mail' => $_POST['email'] , 'year' => $_POST['year'], 'gender' => $_POST['gender'], 'limbs_num' => $_POST['limbs'], 'biography' => $_POST['biography'], 'p_login' => $_POST['p_login'], 'p_pass' => hash("adler32",$_POST['p_pass'])]);
-    setcookie('changed_uid', '', 1);
     $stmt = $db->prepare("DELETE FROM Person_Ability WHERE p_id=:p_id;");
     $stmtErr = $stmt->execute(['p_id' => $_COOKIE['changed_uid']]);
     $stmt = $db->prepare("SELECT * FROM Ability;");
@@ -290,5 +313,7 @@ if ($_SERVER['REQUEST_METHOD']=="GET") {
             }
         }
     }
+    // теперб кука больше не нужна, удаляем
+    setcookie('changed_uid', '', 1);
     header('Location: admin.php');
 }
