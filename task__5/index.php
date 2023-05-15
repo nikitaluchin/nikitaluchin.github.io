@@ -8,11 +8,14 @@
 // Отправляем браузеру правильную кодировку,
 // файл index.php должен быть в кодировке UTF-8 без BOM.
 header('Content-Type: text/html; charset=UTF-8');
+
+// В $_COOKIE автоматически добавляется ключ PHPSESSID \equiv session_name() со значением соотв-им
 session_start();
+
 // В суперглобальном массиве $_SERVER PHP сохраняет некторые заголовки запроса HTTP
 // и другие сведения о клиненте и сервере, например метод текущего запроса $_SERVER['REQUEST_METHOD'].
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    // Массив для временного хранения сообщений пользователю.
+    // Массив для временного хранения сообщений пользователю
     $messages = array();
 
     // В суперглобальном массиве $_COOKIE PHP хранит все имена и значения куки текущего запроса.
@@ -34,12 +37,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         // Если есть параметр save, то выводим сообщение пользователю
         $messages[] = 'Спасибо, результаты сохранены.';
         // Записываем в кач-ве последнего элемента это значение
-        // Если в куках есть пароль, то выводим сообщение
+
+        // Если в куках есть логин (состояние после того, как зарегистрировались), то выводим сообщение
         if (!empty($_COOKIE['login'])) {
+            // sprint для %s
             $messages[] = sprintf('Вы можете <a href="login.php">войти</a> с логином <strong>%s</strong>
         и паролем <strong>%s</strong> для изменения данных.',
                 strip_tags($_COOKIE['login']),
                 strip_tags($_COOKIE['pass']));
+            // strip_tags удаляет HTML-теги из строки, тут Синица зачем-то ее использует...
+
+            // Показали пользователю и удаляем их сразу же
             setcookie('login', '', 1);
             setcookie('pass', '', 1);
         }
@@ -84,6 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $messages[] = '<div class="error-message">Заполните чекбокс.</div>';
     }
 
+    // session_name() вернет строку PHPSESSID (можно было прям и написать PHPSESSID)
+    // в $_SESSION хранится login, только если авторизованы
     if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login'])) {
         printf('Вход с логином %s, uid %d', $_SESSION['login'], $_SESSION['uid']);
     }
@@ -111,8 +121,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // сообщений, полей с ранее заполненными данными и признаками ошибок.
     // (как бы исполнение кода продолжается на form.php)
     include('form.php');
+
 } // Иначе, если запрос был методом POST, т.е. нужно проверить данные и сохранить их в XML-файл.
-else {
+else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = 'u53012';
     $pass = '2656986';
     $db = new PDO('mysql:host=localhost;dbname=u53012', $user, $pass, [PDO::ATTR_PERSISTENT => true]);
@@ -170,9 +181,7 @@ else {
     // парсим оттуда все
     $abilities = $stmt->fetchAll();
     foreach ($abilities as $ability) {
-        // конкатенируем и получаем, напр-р, Invincibility_value
-        // удаляем куки, хранящие значениия всех способностей
-        // все поля выше (конечности, и т.д.) чистить не нужно, ибо они есть всегда
+        // чистим старые куки со способностями
         setcookie($ability['a_name'].'_value', '', 100000);
     }
     /*
@@ -231,6 +240,7 @@ else {
 
     // Сохранение в БД
 
+    // если мы авторизованы, то обновляем данные
     if (!empty($_COOKIE[session_name()]) &&
         session_start() && !empty($_SESSION['login'])) {
         $stmt = $db->prepare("UPDATE Person SET p_name= :name, mail= :mail, year= :year, gender= :gender, limbs_num= :limbs_num, biography= :biography where p_id = :p_id");
@@ -271,9 +281,9 @@ else {
     } else {
         try {
             srand(time());
-            $login = strval(rand(10000,99999));
-            $pass = strval(rand(10000,99999));
-            $passcode = hash("adler32",intval($pass));
+            $login = strval(rand(10000, 99999));
+            $pass = strval(rand(10000, 99999));
+            $passcode = hash("adler32", intval($pass));
             $stmt = $db->prepare("INSERT INTO Person (p_name, mail, year, gender, limbs_num, biography, p_login, p_pass) VALUES (:name, :mail, :year, :gender, :limbs_num, :biography, :p_login, :p_pass);");
             $stmtErr =  $stmt -> execute(['name' => $_POST['name'],'mail' => $_POST['email'] , 'year' => $_POST['year'], 'gender' => $_POST['gender'], 'limbs_num' => $_POST['limbs'], 'biography' => $_POST['biography'],'p_login' => $login, 'p_pass' => $passcode]);
             if (!$stmtErr) {
@@ -284,6 +294,7 @@ else {
             $strId = $db->lastInsertId();
             $_SESSION['login'] = $login;
             $_SESSION['uid'] = intval($strId);
+            // вот она кука о первой регистрации
             setcookie('login', $login, time() + 30 * 24 * 60 * 60);
             setcookie('pass', $pass, time() + 30 * 24 * 60 * 60);
             // Аналогичный цикл был выше, только добавляли в куки, а не в БД
